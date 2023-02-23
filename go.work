@@ -1,6 +1,7 @@
 go 1.20
 
 use (
+	./exercism_001_gophers_lasagna
 	./reverse
 	./test
 	./tutorial_greetings
