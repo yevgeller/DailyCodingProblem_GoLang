@@ -1,8 +1,7 @@
 go 1.20
 
 use (
-	./exercism_001_gophers_lasagna
-	./exercism_002_twofer
+	./exercism/AnnalynsInfil
 	./reverse
 	./test
 	./tutorial_greetings
