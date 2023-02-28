@@ -18,5 +18,5 @@ func stringBanner(numStarsPerLine int) string {
 
 // CleanupMessage cleans up an old marketing message.
 func CleanupMessage(oldMsg string) string {
-	panic("Please implement the CleanupMessage() function")
+	return strings.TrimSpace(strings.Replace(oldMsg, "*", "", -1))
 }
