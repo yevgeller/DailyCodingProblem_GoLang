@@ -9,10 +9,11 @@ func Welcome(name string) string {
 
 // HappyBirthday wishes happy birthday to the birthday person and exclaims their age.
 func HappyBirthday(name string, age int) string {
-	panic("Please implement the HappyBirthday function")
+	return fmt.Sprintf("Happy birthday %s You are now 58 years old!", name)
 }
 
 // AssignTable assigns a table to each guest.
 func AssignTable(name string, table int, neighbor, direction string, distance float64) string {
 	panic("Please implement the AssignTable function")
+	//%.2f
 }
