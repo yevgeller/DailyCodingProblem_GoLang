@@ -19,7 +19,7 @@ func AssignTable(name string, table int, neighbor, direction string, distance fl
 // You will be sitting next to Frank.
 return Welcome(name) +
 fmt.Sprintf(" You have been assigned to table %d.", table) + 
-fmt.Sprintf()
+fmt.Sprintf(" Your table is on the %s, exactly %f.1 meters from here.", direction, distance)
 	panic("Please implement the AssignTable function")
 	//%.2f
 }
