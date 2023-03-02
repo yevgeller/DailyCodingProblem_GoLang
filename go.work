@@ -4,6 +4,7 @@ use (
 	./exercism/AnnalynsInfil
 	./exercism/cars-assemble
 	./exercism/party-robot
+	./exercism/vehicle-purchase
 	./exercism/weather-forecast
 	./exercism/welcome-to-tech-palace
 	./reverse
