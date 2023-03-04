@@ -4,6 +4,7 @@ use (
 	./exercism/AnnalynsInfil
 	./exercism/blackjack
 	./exercism/cars-assemble
+	./exercism/need-for-speed
 	./exercism/party-robot
 	./exercism/vehicle-purchase
 	./exercism/weather-forecast
