@@ -2,6 +2,7 @@ go 1.20
 
 use (
 	./exercism/AnnalynsInfil
+	./exercism/blackjack
 	./exercism/cars-assemble
 	./exercism/party-robot
 	./exercism/vehicle-purchase
