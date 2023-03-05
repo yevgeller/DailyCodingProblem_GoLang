@@ -2,6 +2,16 @@ package speed
 
 // TODO: define the 'Car' type struct
 
+
+Define a `Car` struct with the following `int` type fields:
+
+- battery
+- batteryDrain
+- speed
+- distance
+
+Allow creating a remote controlled car by defining a function `NewCar` that takes the speed of the car in meters,
+and the battery drain percentage as its two parameters (both of type `int`) and returns a `Car` instance:
 // NewCar creates a new remote controlled car with full battery and given specifications.
 func NewCar(speed, batteryDrain int) Car {
 	panic("Please implement the NewCar function")
