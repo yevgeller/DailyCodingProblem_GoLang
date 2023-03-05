@@ -1,36 +1,54 @@
 package speed
 
 // TODO: define the 'Car' type struct
+type Car struct {
+	battery      int
+	batteryDrain int
+	speed        int
+	distance     int
+}
 
+// Define a `Car` struct with the following `int` type fields:
 
-Define a `Car` struct with the following `int` type fields:
+// - battery
+// - batteryDrain
+// - speed
+// - distance
 
-- battery
-- batteryDrain
-- speed
-- distance
-
-Allow creating a remote controlled car by defining a function `NewCar` that takes the speed of the car in meters,
-and the battery drain percentage as its two parameters (both of type `int`) and returns a `Car` instance:
+// Allow creating a remote controlled car by defining a function `NewCar` that takes the speed of the car in meters,
+// and the battery drain percentage as its two parameters (both of type `int`) and returns a `Car` instance:
 // NewCar creates a new remote controlled car with full battery and given specifications.
 func NewCar(speed, batteryDrain int) Car {
-	panic("Please implement the NewCar function")
+	return Car{battery: 100, batteryDrain: batteryDrain, speed: speed, distance: 0}
 }
 
 // TODO: define the 'Track' type struct
+type Track struct {
+	distance int
+}
 
 // NewTrack creates a new track
 func NewTrack(distance int) Track {
-	panic("Please implement the NewTrack function")
+	/*
+			Define another struct type called `Track` with the field `distance` of type integer.
+		Allow creating a race track by defining a function `NewTrack` that takes the track's distance in meters as its sole parameter (which is of type `int`):
+	*/
+	//REMOVE COMMENTS
+	return Track{distance: distance}
 }
 
 // Drive drives the car one time. If there is not enough battery to drive one more time,
 // the car will not move.
 func Drive(car Car) Car {
-	panic("Please implement the Drive function")
+	if car.battery-car.batteryDrain >= 0 {
+		car.distance = car.distance + car.speed
+		car.battery -= car.batteryDrain
+	}
+	return car
 }
 
 // CanFinish checks if a car is able to finish a certain track.
 func CanFinish(car Car, track Track) bool {
-	panic("Please implement the CanFinish function")
+	return car.battery/car.batteryDrain*car.speed >= track.distance
+
 }
