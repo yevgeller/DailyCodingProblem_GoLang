@@ -10,11 +10,6 @@ type Car struct {
 
 // Define a `Car` struct with the following `int` type fields:
 
-// - battery
-// - batteryDrain
-// - speed
-// - distance
-
 // Allow creating a remote controlled car by defining a function `NewCar` that takes the speed of the car in meters,
 // and the battery drain percentage as its two parameters (both of type `int`) and returns a `Car` instance:
 // NewCar creates a new remote controlled car with full battery and given specifications.
@@ -29,11 +24,6 @@ type Track struct {
 
 // NewTrack creates a new track
 func NewTrack(distance int) Track {
-	/*
-			Define another struct type called `Track` with the field `distance` of type integer.
-		Allow creating a race track by defining a function `NewTrack` that takes the track's distance in meters as its sole parameter (which is of type `int`):
-	*/
-	//REMOVE COMMENTS
 	return Track{distance: distance}
 }
 
