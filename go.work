@@ -3,6 +3,7 @@ go 1.20
 use (
 	./exercism/AnnalynsInfil
 	./exercism/blackjack
+	./exercism/card-tricks
 	./exercism/cars-assemble
 	./exercism/need-for-speed
 	./exercism/party-robot
