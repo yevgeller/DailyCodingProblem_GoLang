@@ -2,7 +2,9 @@ package cards
 
 // FavoriteCards returns a slice with the cards 2, 6 and 9 in that order.
 func FavoriteCards() []int {
-	panic("Please implement the FavoriteCards function")
+	ret := []int{2}
+	ret = append(ret, 6, 9)
+	return ret
 }
 
 // GetItem retrieves an item from a slice at given position.
