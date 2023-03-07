@@ -42,11 +42,11 @@ func RemoveItem(slice []int, index int) []int {
 	if len(slice)-1 < index || index < 0 {
 		return slice
 	}
-	if(index == 0) {
-	return slice[1:len(slice)-1]
+	if index == 0 {
+		return slice[1:]
 	}
-	if(index == len(slice)) {
-		return slice[0:len(slice)-2]
+	if index == len(slice) {
+		return slice[0:]
 	}
-	return append(slice[0:index-1], slice[index+1:]...)
+	return append(slice[0:index], slice[index+1:]...)
 }
