@@ -3,7 +3,11 @@ package birdwatcher
 // TotalBirdCount return the total bird count by summing
 // the individual day's counts.
 func TotalBirdCount(birdsPerDay []int) int {
-	panic("Please implement the TotalBirdCount() function")
+	result := 0;
+	for i:=1; i < len(birdsPerDay); i++ {
+result += birdsPerDay[i]
+	}
+	return result;
 }
 
 // BirdsInWeek returns the total bird count by summing
