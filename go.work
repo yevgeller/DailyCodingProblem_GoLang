@@ -2,6 +2,7 @@ go 1.20
 
 use (
 	./exercism/AnnalynsInfil
+	./exercism/bird-watcher
 	./exercism/blackjack
 	./exercism/card-tricks
 	./exercism/cars-assemble
