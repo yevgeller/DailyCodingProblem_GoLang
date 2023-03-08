@@ -6,6 +6,7 @@ use (
 	./exercism/blackjack
 	./exercism/card-tricks
 	./exercism/cars-assemble
+	./exercism/lasagna-master
 	./exercism/need-for-speed
 	./exercism/party-robot
 	./exercism/vehicle-purchase
