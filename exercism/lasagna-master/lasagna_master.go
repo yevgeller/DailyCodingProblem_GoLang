@@ -2,8 +2,8 @@ package lasagna
 
 // TODO: define the 'PreparationTime()' function
 func PreparationTime(layers []string, averagePrepTime int) int {
-	if averagePrepTime <= 0 || len(layers) == 0 {
-		return 12
+	if averagePrepTime <= 0 {
+		averagePrepTime = 2
 	}
 	return len(layers) * averagePrepTime
 
