@@ -38,7 +38,7 @@ func ScaleRecipe(quantities []float64, portions int) []float64 {
 	// 	return result
 	// }
 	for i := 0; i < len(quantities); i++ {
-		result[i] = quantities[i] * (float64(portions) / 2)
+		result = append(result, quantities[i]*(float64(portions)/2))
 	}
 	return result
 }
