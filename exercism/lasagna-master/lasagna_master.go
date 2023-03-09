@@ -33,10 +33,7 @@ func AddSecretIngredient(friends, own []string) {
 // TODO: define the 'ScaleRecipe()' function
 func ScaleRecipe(quantities []float64, portions int) []float64 {
 	var result []float64
-	// if len(quantities) == 0 {
-
-	// 	return result
-	// }
+	
 	for i := 0; i < len(quantities); i++ {
 		result = append(result, quantities[i]*(float64(portions)/2))
 	}
