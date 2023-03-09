@@ -26,5 +26,19 @@ func Quantities(layers []string) (int, float64) {
 }
 
 // TODO: define the 'AddSecretIngredient()' function
+func AddSecretIngredient(friends, own []string) {
+	own[len(own)-1] = friends[len(friends)-1]
+}
 
 // TODO: define the 'ScaleRecipe()' function
+func ScaleRecipe(quantities []float64, portions int) []float64 {
+	var result []float64
+	// if len(quantities) == 0 {
+
+	// 	return result
+	// }
+	for i := 0; i < len(quantities); i++ {
+		result[i] = quantities[i] * (float64(portions) / 2)
+	}
+	return result
+}
