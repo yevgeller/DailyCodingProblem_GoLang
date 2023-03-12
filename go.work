@@ -5,6 +5,7 @@ use (
 	./exercism/animal-magic
 	./exercism/bird-watcher
 	./exercism/blackjack
+	./exercism/booking-up-for-beauty
 	./exercism/card-tricks
 	./exercism/cars-assemble
 	./exercism/lasagna-master
