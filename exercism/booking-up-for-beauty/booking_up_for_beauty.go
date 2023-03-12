@@ -9,7 +9,7 @@ func Schedule(date string) time.Time {
 
 // HasPassed returns whether a date has passed.
 func HasPassed(date string) bool {
-	panic("Please implement the HasPassed function")
+	return Schedule(date).Before(time.Now())
 }
 
 // IsAfternoonAppointment returns whether a time is in the afternoon.
