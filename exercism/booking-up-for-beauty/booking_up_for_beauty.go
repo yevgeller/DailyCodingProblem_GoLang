@@ -14,7 +14,8 @@ func HasPassed(date string) bool {
 
 // IsAfternoonAppointment returns whether a time is in the afternoon.
 func IsAfternoonAppointment(date string) bool {
-	panic("Please implement the IsAfternoonAppointment function")
+	hour := Schedule(date).Hour()
+	return hour >= 12 && hour <= 18
 }
 
 // Description returns a formatted string of the appointment time.
