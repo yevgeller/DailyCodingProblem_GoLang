@@ -7,10 +7,7 @@ import (
 
 // Schedule returns a time.Time from a string containing a date.
 func Schedule(date string) time.Time {
-	//layout := "Mon Jan 2 15:04:05 -0700 MST 2006" //"7/25/2020 13:45:00"
-	panic("")
 	t, _ := time.Parse("1/2/2006 15:04:05", date)
-
 	return t
 }
 
