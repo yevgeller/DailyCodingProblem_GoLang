@@ -13,8 +13,6 @@ func Schedule(date string) time.Time {
 
 // HasPassed returns whether a date has passed.
 func HasPassed(date string) bool {
-	panic("")
-
 	t, _ := time.Parse("January 2, 2006 15:04:05", date)
 	return t.Before(time.Now())
 }
