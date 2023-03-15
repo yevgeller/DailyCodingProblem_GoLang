@@ -8,6 +8,7 @@ use (
 	./exercism/booking-up-for-beauty
 	./exercism/card-tricks
 	./exercism/cars-assemble
+	./exercism/gross-store
 	./exercism/lasagna-master
 	./exercism/need-for-speed
 	./exercism/party-robot
