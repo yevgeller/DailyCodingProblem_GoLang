@@ -25,10 +25,7 @@ func IsAfternoonAppointment(date string) bool {
 
 // Description returns a formatted string of the appointment time.
 func Description(date string) string {
-	panic("")
-
 	d := Schedule(date)
-
 	return fmt.Sprintf("You have an appointment on %s, %s.", d.Weekday(), d.Format("January 2, 2006, at 15:04"))
 }
 
