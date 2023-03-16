@@ -40,11 +40,6 @@ func AddItem(bill, units map[string]int, item, unit string) bool {
 	return true
 }
 
-func itemInMap(thisMap map[string]int, item string) bool {
-	_, exists := thisMap[item]
-	return exists
-}
-
 // RemoveItem removes an item from customer bill.
 // To delete an item from a map, you can use
 //
