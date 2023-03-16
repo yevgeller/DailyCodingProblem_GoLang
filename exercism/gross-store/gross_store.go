@@ -2,18 +2,6 @@ package gross
 
 import "fmt"
 
-/*
-map[KeyType]ElementType
-foo := map[string]int{}
- foo := make(map[string]int)
-foo["bar"] = 42
-delete(foo, "bar")
-
-value, exists := foo["baz"]
-If the key "baz" does not exist,
-value: 0; exists: false
-
-*/
 // Units stores the Gross Store unit measurements.
 func Units() map[string]int {
 	newMap := make(map[string]int)
@@ -62,7 +50,7 @@ func itemInMap(thisMap map[string]int, item string) bool {
 //
 //	delete(foo, "bar")
 func RemoveItem(bill, units map[string]int, item, unit string) bool {
-	panic("No RemoveItem function")
+	//panic("No RemoveItem function")
 	fmt.Println(bill)
 	fmt.Println(item, unit)
 	itemVal, unitExists := units[unit]
@@ -104,7 +92,7 @@ func RemoveItem(bill, units map[string]int, item, unit string) bool {
 
 // GetItem returns the quantity of an item that the customer has in his/her bill.
 func GetItem(bill map[string]int, item string) (int, bool) {
-	panic("Please implement the GetItem() function")
+	//panic("Please implement the GetItem() function")
 	currItemValue, itemExist := bill[item]
 	if itemExist == false {
 		return 0, false
