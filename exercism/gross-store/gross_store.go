@@ -50,7 +50,6 @@ func itemInMap(thisMap map[string]int, item string) bool {
 //
 //	delete(foo, "bar")
 func RemoveItem(bill, units map[string]int, item, unit string) bool {
-	//panic("No RemoveItem function")
 	fmt.Println(bill)
 	fmt.Println(item, unit)
 	itemVal, unitExists := units[unit]
