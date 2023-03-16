@@ -36,7 +36,6 @@ func NewBill() map[string]int {
 // value: 0; exists: false
 // AddItem adds an item to customer bill.
 func AddItem(bill, units map[string]int, item, unit string) bool {
-	panic("Please implement the AddItem() function")
 	itemVal, unitExists := units[unit]
 	if unitExists == false {
 		return false
