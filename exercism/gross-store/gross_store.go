@@ -75,12 +75,13 @@ func RemoveItem(bill, units map[string]int, item, unit string) bool {
 	if diff == 0 {
 		fmt.Println("-- diff is 0, removing item --")
 		fmt.Printf("\n\n")
-		delete(bill, "item")
+		delete(bill, item)
+		//fmt.Println(bill)
 		return true
 	}
 
 	fmt.Println("-- Positive diff, decreasing item --")
-		fmt.Printf("\n\n")
+	fmt.Printf("\n\n")
 	bill[item] = diff
 	return true
 }
