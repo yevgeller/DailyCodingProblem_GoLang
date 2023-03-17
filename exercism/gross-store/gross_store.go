@@ -19,9 +19,6 @@ func NewBill() map[string]int {
 	return make(map[string]int)
 }
 
-// value, exists := foo["baz"]
-// If the key "baz" does not exist,
-// value: 0; exists: false
 // AddItem adds an item to customer bill.
 func AddItem(bill, units map[string]int, item, unit string) bool {
 	itemVal, unitExists := units[unit]
@@ -41,9 +38,6 @@ func AddItem(bill, units map[string]int, item, unit string) bool {
 }
 
 // RemoveItem removes an item from customer bill.
-// To delete an item from a map, you can use
-//
-//	delete(foo, "bar")
 func RemoveItem(bill, units map[string]int, item, unit string) bool {
 	fmt.Println(bill)
 	fmt.Println(item, unit)
