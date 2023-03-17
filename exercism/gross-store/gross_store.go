@@ -50,7 +50,7 @@ func RemoveItem(bill, units map[string]int, item, unit string) bool {
 	itemVal, unitExists := units[unit]
 	if unitExists == false {
 		fmt.Printf("unit %s does not exist", unit)
-		fmt.Println("------ next ------")
+		fmt.Printf("\n\n")
 
 		return false
 	}
@@ -58,7 +58,7 @@ func RemoveItem(bill, units map[string]int, item, unit string) bool {
 	currItemValue, itemExist := bill[item]
 	if itemExist == false {
 		fmt.Printf("item %s does not exist", item)
-		fmt.Println("------ next ------")
+		fmt.Printf("\n\n")
 		return false
 	}
 
@@ -67,19 +67,20 @@ func RemoveItem(bill, units map[string]int, item, unit string) bool {
 
 	if diff < 0 {
 		fmt.Println("-- Negative diff --")
-		fmt.Println("------ next ------")
+		fmt.Printf("\n\n")
+
 		return false
 	}
 
 	if diff == 0 {
 		fmt.Println("-- diff is 0, removing item --")
-		fmt.Println("------ next ------")
+		fmt.Printf("\n\n")
 		delete(bill, "item")
 		return true
 	}
 
 	fmt.Println("-- Positive diff, decreasing item --")
-	fmt.Println("------ next ------")
+		fmt.Printf("\n\n")
 	bill[item] = diff
 	return true
 }
