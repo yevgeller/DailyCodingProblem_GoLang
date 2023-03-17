@@ -1,7 +1,5 @@
 package gross
 
-import "fmt"
-
 // Units stores the Gross Store unit measurements.
 func Units() map[string]int {
 	newMap := make(map[string]int)
@@ -39,43 +37,27 @@ func AddItem(bill, units map[string]int, item, unit string) bool {
 
 // RemoveItem removes an item from customer bill.
 func RemoveItem(bill, units map[string]int, item, unit string) bool {
-	fmt.Println(bill)
-	fmt.Println(item, unit)
 	itemVal, unitExists := units[unit]
 	if unitExists == false {
-		fmt.Printf("unit %s does not exist", unit)
-		fmt.Printf("\n\n")
-
 		return false
 	}
 
 	currItemValue, itemExist := bill[item]
 	if itemExist == false {
-		fmt.Printf("item %s does not exist", item)
-		fmt.Printf("\n\n")
 		return false
 	}
 
 	diff := currItemValue - itemVal
-	fmt.Printf("diff is %d", diff)
 
 	if diff < 0 {
-		fmt.Println("-- Negative diff --")
-		fmt.Printf("\n\n")
-
 		return false
 	}
 
 	if diff == 0 {
-		fmt.Println("-- diff is 0, removing item --")
-		fmt.Printf("\n\n")
 		delete(bill, item)
-		//fmt.Println(bill)
 		return true
 	}
 
-	fmt.Println("-- Positive diff, decreasing item --")
-	fmt.Printf("\n\n")
 	bill[item] = diff
 	return true
 }
