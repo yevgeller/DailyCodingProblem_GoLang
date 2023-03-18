@@ -6,6 +6,7 @@ type File struct {
 
 // Declare a type named Chessboard which contains a map of eight Files, accessed with keys from "A" to "H"
 type Chessboard struct {
+	smth map[File]string
 }
 
 // CountInFile returns how many squares are occupied in the chessboard,
