@@ -13,6 +13,9 @@ func CountInFile(cb Chessboard, file string) int {
 	if exists == false {
 		return 0
 	}
+
+	occupied := 0
+	
 	return 0
 }
 
