@@ -15,8 +15,12 @@ func CountInFile(cb Chessboard, file string) int {
 	}
 
 	occupied := 0
-	
-	return 0
+	for _, x := range row {
+		if x == true {
+			occupied += 1
+		}
+	}
+	return occupied
 }
 
 // CountInRank returns how many squares are occupied in the chessboard,
