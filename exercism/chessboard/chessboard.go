@@ -9,7 +9,9 @@ type Chessboard map[string]File
 // CountInFile returns how many squares are occupied in the chessboard,
 // within the given file.
 func CountInFile(cb Chessboard, file string) int {
-	panic("Please implement CountInFile()")
+	row := cb[file]
+
+	return 0
 }
 
 // CountInRank returns how many squares are occupied in the chessboard,
