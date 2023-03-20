@@ -40,7 +40,6 @@ func CountInRank(cb Chessboard, rank int) int {
 
 // CountAll should count how many squares are present in the chessboard.
 func CountAll(cb Chessboard) int {
-	panic("Please implement CountAll()")
 	var all int
 	for x := range cb {
 		for range cb[x] {
