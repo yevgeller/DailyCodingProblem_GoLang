@@ -30,14 +30,9 @@ func CountInRank(cb Chessboard, rank int) int {
 	if rank <= 0 || rank > 8 {
 		return 0
 	}
-	row, exists := cb[rank]
-	if exists == false {
-		return 0
-	}
-
-	occupied := 0
-	for _, x := range row {
-		if x == true {
+	var occupied int
+	for x := range cb {
+		if cb[x][rank-1] {
 			occupied += 1
 		}
 	}
