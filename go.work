@@ -11,6 +11,7 @@ use (
 	./exercism/chessboard
 	./exercism/gross-store
 	./exercism/lasagna-master
+	./exercism/logs-logs-logs
 	./exercism/need-for-speed
 	./exercism/party-robot
 	./exercism/vehicle-purchase
