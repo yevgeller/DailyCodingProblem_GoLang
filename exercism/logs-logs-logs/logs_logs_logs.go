@@ -1,7 +1,5 @@
 package logs
 
-import "fmt"
-
 /*
 myString := "❗hello"
 for index, char := range myString {
@@ -21,10 +19,16 @@ fmt.Printf("myString - Length: %d - Runes: %d\n", stringLength, numberOfRunes)
 // Application identifies the application emitting the given log.
 func Application(log string) string {
 	//panic("Please implement the Application() function")
-	for index, char := range log {
-		if char == '' {return "recommendation"}
-		else if char == '' {return "search"}
-		else if char == '' {return "weather"}
+	for _, char := range log {
+		if char == '❗' {
+			return "recommendation"
+		}
+		if char == '🔍' {
+			return "search"
+		}
+		if char == '☀' {
+			return "weather"
+		}
 		//fmt.Printf("Index: %d\tCharacter: %c\t\tCode Point: %U\n, %v", index, char, char, char < 'a' || char > 'Z')
 	}
 	return "log"
