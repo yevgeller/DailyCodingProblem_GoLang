@@ -31,7 +31,7 @@ func Application(log string) string {
 		}
 		//fmt.Printf("Index: %d\tCharacter: %c\t\tCode Point: %U\n, %v", index, char, char, char < 'a' || char > 'Z')
 	}
-	return "log"
+	return "default"
 }
 
 // Replace replaces all occurrences of old with new, returning the modified log
