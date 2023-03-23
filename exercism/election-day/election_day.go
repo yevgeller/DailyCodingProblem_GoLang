@@ -4,6 +4,7 @@ package electionday
 // a given number of initial votes.
 func NewVoteCounter(initialVotes int) *int {
 	panic("Please implement the NewVoteCounter() function")
+
 }
 
 // VoteCount extracts the number of votes from a counter.
