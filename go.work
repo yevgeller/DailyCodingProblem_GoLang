@@ -10,6 +10,7 @@ use (
 	./exercism/cars-assemble
 	./exercism/chessboard
 	./exercism/election-day
+	./exercism/elons-toys
 	./exercism/gross-store
 	./exercism/lasagna-master
 	./exercism/logs-logs-logs
