@@ -3,9 +3,9 @@ package elon
 import "fmt"
 
 // TODO: define the 'Drive()' method
-func (car *Car) Drive(speed, batteryDrain int) {
-	car.distance += speed
-	car.battery -= batteryDrain
+func (car *Car) Drive() {
+	car.distance += car.speed
+	car.battery -= car.batteryDrain
 }
 
 // TODO: define the 'DisplayDistance() string' method
