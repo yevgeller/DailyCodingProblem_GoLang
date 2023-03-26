@@ -7,7 +7,9 @@ func (car *Car) Drive(speed, batteryDrain int) {
 }
 
 // TODO: define the 'DisplayDistance() string' method
-
+func (car *Car) DisplayDistance() string {
+	return "5" //work more on this
+}
 // TODO: define the 'DisplayBattery() string' method
 
 // TODO: define the 'CanFinish(trackDistance int) bool' method
