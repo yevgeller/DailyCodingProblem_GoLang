@@ -20,6 +20,9 @@ func (car *Car) DisplayBattery() string {
 }
 
 // TODO: define the 'CanFinish(trackDistance int) bool' method
+func (car *Car) CanFinish(trackDistance int) bool {
+	return true
+}
 
 // Your first steps could be to read through the tasks, and create
 // these functions with their correct parameter lists and return types.
