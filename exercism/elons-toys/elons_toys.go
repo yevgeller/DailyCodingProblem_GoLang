@@ -1,5 +1,7 @@
 package elon
 
+import "fmt"
+
 // TODO: define the 'Drive()' method
 func (car *Car) Drive(speed, batteryDrain int) {
 	car.distance += speed
@@ -14,8 +16,7 @@ func (car *Car) DisplayDistance() string {
 
 // TODO: define the 'DisplayBattery() string' method
 func (car *Car) DisplayBattery() string {
-	panic("")
-	//return fmt.Sprintf("Battery is at %d", car.battery)
+	return fmt.Sprintf("Battery is at %d", car.battery)
 }
 
 // TODO: define the 'CanFinish(trackDistance int) bool' method
