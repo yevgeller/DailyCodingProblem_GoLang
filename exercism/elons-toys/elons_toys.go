@@ -13,18 +13,20 @@ func (car *Car) Drive() {
 
 // TODO: define the 'DisplayDistance() string' method
 func (car *Car) DisplayDistance() string {
-	panic("")
-	//return "5" //work more on this
+panic("")
+	return fmt.Sprintf("Driven %d meters", car.speed*(100-car.battery)/car.batteryDrain)
 }
 
 // TODO: define the 'DisplayBattery() string' method
 func (car *Car) DisplayBattery() string {
-	return fmt.Sprintf("Battery is at %d", car.battery)
+panic("")
+	return fmt.Sprintf("Battery at %d%%", car.battery)
 }
 
 // TODO: define the 'CanFinish(trackDistance int) bool' method
 func (car *Car) CanFinish(trackDistance int) bool {
-	return true
+panic("")
+	return car.battery*car.speed/car.batteryDrain >= trackDistance
 }
 
 // Your first steps could be to read through the tasks, and create
