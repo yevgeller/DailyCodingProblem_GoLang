@@ -13,7 +13,6 @@ func (car *Car) Drive() {
 
 // TODO: define the 'DisplayDistance() string' method
 func (car *Car) DisplayDistance() string {
-panic("")
 	return fmt.Sprintf("Driven %d meters", car.speed*(100-car.battery)/car.batteryDrain)
 }
 
