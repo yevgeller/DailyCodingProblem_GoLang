@@ -24,12 +24,12 @@ func (it Italian) Greet(name string) string {
 	return fmt.Sprintf("Ciao %s!", name)
 }
 
-type Portuguese struct{}
+// type Portuguese struct{}
 
-func (po Portuguese) LanguageName() string {
-	return "Portuguese"
-}
+// func (po Portuguese) LanguageName() string {
+// 	return "Portuguese"
+// }
 
-func (po Portuguese) Greet(name string) string {
-	return fmt.Sprintf("Olá %s!", name)
-}
+// func (po Portuguese) Greet(name string) string {
+// 	return fmt.Sprintf("Olá %s!", name)
+// }
