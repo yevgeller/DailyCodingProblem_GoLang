@@ -23,7 +23,6 @@ func (car *Car) DisplayBattery() string {
 
 // TODO: define the 'CanFinish(trackDistance int) bool' method
 func (car *Car) CanFinish(trackDistance int) bool {
-panic("")
 	return car.battery*car.speed/car.batteryDrain >= trackDistance
 }
 
