@@ -18,7 +18,6 @@ func (car *Car) DisplayDistance() string {
 
 // TODO: define the 'DisplayBattery() string' method
 func (car *Car) DisplayBattery() string {
-panic("")
 	return fmt.Sprintf("Battery at %d%%", car.battery)
 }
 
