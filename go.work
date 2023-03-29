@@ -17,6 +17,7 @@ use (
 	./exercism/logs-logs-logs
 	./exercism/need-for-speed
 	./exercism/party-robot
+	./exercism/sorting-room
 	./exercism/vehicle-purchase
 	./exercism/weather-forecast
 	./exercism/welcome-to-tech-palace
