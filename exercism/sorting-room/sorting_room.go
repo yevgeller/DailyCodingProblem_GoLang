@@ -1,8 +1,10 @@
 package sorting
 
+import "strconv"
+
 // DescribeNumber should return a string describing the number.
 func DescribeNumber(f float64) string {
-	panic("Please implement DescribeNumber")
+	return strconv.FormatFloat(f, 'E', -1, 64)
 }
 
 type NumberBox interface {
