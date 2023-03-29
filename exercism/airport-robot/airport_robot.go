@@ -10,7 +10,7 @@ type Greeter interface {
 	Greet(name string) string
 }
 
-func SayHello(greeter Greeter, name string) string {
+func SayHello(name string, greeter Greeter) string {
 	return fmt.Sprintf("I can speak %s: %s", greeter.LanguageName(), greeter.Greet(name))
 }
 
