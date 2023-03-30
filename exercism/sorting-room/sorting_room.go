@@ -6,7 +6,7 @@ import "strconv"
 func DescribeNumber(f float64) string {
 	return strconv.FormatFloat(f, 'E', -1, 64)
 }
-
+cheat day
 type NumberBox interface {
 	Number() int
 }
