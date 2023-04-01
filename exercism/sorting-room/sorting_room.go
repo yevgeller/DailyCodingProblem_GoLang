@@ -1,6 +1,7 @@
 package sorting
 
 import (
+	"fmt"
 	"strconv"
 )
 
@@ -15,7 +16,8 @@ type NumberBox interface {
 
 // DescribeNumberBox should return a string describing the NumberBox.
 func DescribeNumberBox(nb NumberBox) string {
-	panic("Please implement DescribeNumberBox")
+	//panic("Please implement DescribeNumberBox")
+	return "This is a box containing the number " + strconv.FormatFloat(float64(nb.Number()), 'f', 1, 64)
 }
 
 type FancyNumber struct {
@@ -33,15 +35,44 @@ type FancyNumberBox interface {
 // ExtractFancyNumber should return the integer value for a FancyNumber
 // and 0 if any other FancyNumberBox is supplied.
 func ExtractFancyNumber(fnb FancyNumberBox) int {
-	panic("Please implement ExtractFancyNumber")
+	//panic("Please implement ExtractFancyNumber")
+
+	_, ok := fnb.(FancyNumber)
+	if ok {
+		var i, _ = strconv.Atoi(fnb.Value())
+		return i
+	}
+	return 0
 }
 
 // DescribeFancyNumberBox should return a string describing the FancyNumberBox.
 func DescribeFancyNumberBox(fnb FancyNumberBox) string {
-	panic("Please implement DescribeFancyNumberBox")
+	//panic("Please implement DescribeFancyNumberBox")
+	start := "This is a fancy box containing the number"
+	badFinish := "0.0"
+	_, ok := fnb.(FancyNumber)
+	if ok {
+		var i, _ = strconv.Atoi(fnb.Value())
+		return fmt.Sprintf("%s %s", start, strconv.FormatFloat(float64(i), 'f', 1, 64))
+
+	}
+	return fmt.Sprintf("%s %s", start, badFinish)
 }
 
 // DescribeAnything should return a string describing whatever it contains.
 func DescribeAnything(i interface{}) string {
-	panic("Please implement DescribeAnything")
+	//panic("Please implement DescribeAnything")
+	switch v := i.(type) {
+	case int:
+		return DescribeNumber(float64(v))
+	case float64:
+		return DescribeNumber(v)
+	case NumberBox:
+		return DescribeNumberBox(v)
+	case FancyNumberBox:
+		return DescribeFancyNumberBox(v)
+	default:
+		return "Return to sender"
+
+	}
 }
