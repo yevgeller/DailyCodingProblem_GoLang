@@ -34,7 +34,6 @@ type FancyNumberBox interface {
 // ExtractFancyNumber should return the integer value for a FancyNumber
 // and 0 if any other FancyNumberBox is supplied.
 func ExtractFancyNumber(fnb FancyNumberBox) int {
-	//panic("Please implement ExtractFancyNumber")
 
 	_, ok := fnb.(FancyNumber)
 	if ok {
