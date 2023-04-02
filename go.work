@@ -18,6 +18,7 @@ use (
 	./exercism/need-for-speed
 	./exercism/party-robot
 	./exercism/sorting-room
+	./exercism/the-farm
 	./exercism/vehicle-purchase
 	./exercism/weather-forecast
 	./exercism/welcome-to-tech-palace
