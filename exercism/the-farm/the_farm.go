@@ -39,14 +39,6 @@ func DivideFood(weightFodder WeightFodder, cows int) (float64, error) {
 	if cows < 0 {
 		return 0.0, &SillyNephewError{message: "silly nephew, there cannot be", details: fmt.Sprintf("%d cows", cows)}
 	}
-
-	// if err != nil {
-	// 	println(err.Error())
-	// 	return 0.0, err
-	// }
-	// if amt < 0 {
-	// 	return 0.0, errors.New("negative fodder")
-	// }
-	//println("37")
+	
 	return amt / float64(cows), nil
 }
