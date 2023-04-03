@@ -9,10 +9,12 @@ use (
 	./exercism/booking-up-for-beauty
 	./exercism/card-tricks
 	./exercism/cars-assemble
+	./exercism/census
 	./exercism/chessboard
 	./exercism/election-day
 	./exercism/elons-toys
 	./exercism/gross-store
+	./exercism/interest-is-interesting
 	./exercism/lasagna-master
 	./exercism/logs-logs-logs
 	./exercism/need-for-speed
