@@ -8,7 +8,10 @@ func InterestRate(balance float64) float32 {
 	if balance < 1000 {
 		return 0.5 / 100
 	}
-if 
+	if balance < 5000 {
+		return 1.621 / 100
+	}
+	return 2.475 / 100
 }
 
 // Interest calculates the interest for the provided balance.
