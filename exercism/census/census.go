@@ -20,11 +20,9 @@ func (r *Resident) HasRequiredInfo() bool {
 
 // Delete deletes a resident's information.
 func (r *Resident) Delete() {
-	//panic("Please implement Delete.")
 	r.Name = ""
 	r.Age = 0
-	//str := make(map[string]string)
-	r.Address = map[string]string(nil) //make(map[string]string)
+	r.Address = map[string]string(nil) 
 }
 
 // Count counts all residents that have provided the required information.
