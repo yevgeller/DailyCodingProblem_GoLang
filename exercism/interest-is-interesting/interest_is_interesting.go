@@ -21,11 +21,6 @@ func Interest(balance float64) float64 {
 
 // AnnualBalanceUpdate calculates the annual balance update, taking into account the interest rate.
 func AnnualBalanceUpdate(balance float64) float64 {
-	//panic("Please implement the AnnualBalanceUpdate function")
-	// for i := 0; i < 12; i++ {
-	// 	balance += Interest(balance)
-	// }
-
 	return balance + Interest(balance)
 }
 
