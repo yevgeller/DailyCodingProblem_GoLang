@@ -17,11 +17,11 @@ type DaysPeriod struct {
 func Filter(in []Record, predicate func(Record) bool) []Record {
 	//panic("Please implement the Filter function")
 
-	out := []Record{}
+	out := make([]Record, 1)
 
 	for _, r := range in {
 		if predicate(r) {
-			out = append(r)
+			out = append(out, r) // out.append(r)
 		}
 	}
 
