@@ -13,6 +13,7 @@ use (
 	./exercism/chessboard
 	./exercism/election-day
 	./exercism/elons-toys
+	./exercism/expenses
 	./exercism/gross-store
 	./exercism/interest-is-interesting
 	./exercism/lasagna-master
