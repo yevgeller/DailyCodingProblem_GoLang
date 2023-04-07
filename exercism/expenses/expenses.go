@@ -33,7 +33,7 @@ func Filter(in []Record, predicate func(Record) bool) []Record {
 func ByDaysPeriod(p DaysPeriod) func(Record) bool {
 	//panic("Please implement the ByDaysPeriod function")
 	return func(r Record) bool {
-		return r.Day >= p.From && r.Day <= p.To
+		return r.Day > p.From && r.Day < p.To
 	}
 }
 
