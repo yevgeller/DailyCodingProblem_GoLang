@@ -53,7 +53,13 @@ func TotalByPeriod(in []Record, p DaysPeriod) float64 {
 	//panic("Please implement the TotalByPeriod function")
 	var fil = ByDaysPeriod(p)
 	records := Filter(in, fil)
-	
+	total := 0.0
+
+	for _, r := range records {
+		total += r.Amount
+	}
+
+	return total
 }
 
 // CategoryExpenses returns total amount of expenses for records
