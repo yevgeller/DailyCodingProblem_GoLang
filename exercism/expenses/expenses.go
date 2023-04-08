@@ -35,10 +35,7 @@ func Filter(in []Record, predicate func(Record) bool) []Record {
 // ByDaysPeriod returns predicate function that returns true when
 // the day of the record is inside the period of day and false otherwise.
 func ByDaysPeriod(p DaysPeriod) func(Record) bool {
-	//panic("Please implement the ByDaysPeriod function")
 	return func(r Record) bool {
-		// fmt.Println(r, p)
-		// fmt.Println(r.Day >= p.From && r.Day <= p.To)
 		return r.Day >= p.From && r.Day <= p.To
 	}
 }
