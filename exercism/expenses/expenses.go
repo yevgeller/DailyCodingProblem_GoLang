@@ -1,6 +1,9 @@
 package expenses
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 // Record represents an expense record.
 type Record struct {
@@ -19,7 +22,7 @@ type DaysPeriod struct {
 func Filter(in []Record, predicate func(Record) bool) []Record {
 	//panic("Please implement the Filter function")
 
-	out := make([]Record, 1)
+	out := make([]Record, 0)
 
 	for _, r := range in {
 		if predicate(r) {
@@ -35,7 +38,9 @@ func Filter(in []Record, predicate func(Record) bool) []Record {
 func ByDaysPeriod(p DaysPeriod) func(Record) bool {
 	//panic("Please implement the ByDaysPeriod function")
 	return func(r Record) bool {
-		return r.Day > p.From && r.Day < p.To
+		// fmt.Println(r, p)
+		// fmt.Println(r.Day >= p.From && r.Day <= p.To)
+		return r.Day >= p.From && r.Day <= p.To
 	}
 }
 
@@ -53,8 +58,12 @@ func ByCategory(c string) func(Record) bool {
 // inside the period p.
 func TotalByPeriod(in []Record, p DaysPeriod) float64 {
 	//panic("Please implement the TotalByPeriod function")
+	fmt.Println("--- new test ---")
+	fmt.Println("in: ", in)
+	fmt.Println("condition: ", p)
 	var fil = ByDaysPeriod(p) //simplify
 	records := Filter(in, fil)
+	fmt.Println("filtered: ", records)
 	return calcTotal(records)
 }
 
@@ -76,7 +85,7 @@ func CategoryExpenses(in []Record, p DaysPeriod, c string) (float64, error) {
 	//panic("Please implement the CategoryExpenses function")
 	var byCategory = Filter(in, ByCategory(c))
 	if len(byCategory) == 0 {
-		return 0.0, errors.New("unknown category " + c)
+		return 0.0, errors.New("unknown category ")
 	}
 	var byDays = Filter(byCategory, ByDaysPeriod(p))
 
