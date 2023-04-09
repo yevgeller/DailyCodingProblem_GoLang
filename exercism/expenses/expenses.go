@@ -54,7 +54,6 @@ func ByCategory(c string) func(Record) bool {
 func TotalByPeriod(in []Record, p DaysPeriod) float64 {
 	var fil = ByDaysPeriod(p) //simplify
 	records := Filter(in, fil)
-	fmt.Println("filtered: ", records)
 	return calcTotal(records)
 }
 
