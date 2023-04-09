@@ -2,7 +2,6 @@ package expenses
 
 import (
 	"errors"
-	"fmt"
 )
 
 // Record represents an expense record.
