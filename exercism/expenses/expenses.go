@@ -72,7 +72,6 @@ func calcTotal(in []Record) float64 {
 // An error must be returned only if there are no records in the list that belong
 // to the given category, regardless of period of time.
 func CategoryExpenses(in []Record, p DaysPeriod, c string) (float64, error) {
-	//panic("Please implement the CategoryExpenses function")
 	var byCategory = Filter(in, ByCategory(c))
 	if len(byCategory) == 0 {
 		return 0.0, errors.New("unknown category ")
