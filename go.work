@@ -19,6 +19,7 @@ use (
 	./exercism/lasagna-master
 	./exercism/logs-logs-logs
 	./exercism/need-for-speed
+	./exercism/parsing-log-files
 	./exercism/party-robot
 	./exercism/sorting-room
 	./exercism/the-farm
