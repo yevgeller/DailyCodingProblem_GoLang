@@ -74,9 +74,5 @@ func CategoryExpenses(in []Record, p DaysPeriod, c string) (float64, error) {
 	if len(byCategory) == 0 {
 		return 0.0, errors.New("unknown category ")
 	}
-	var byDays = TotalByPeriod(byCategory, p) // Filter(byCategory, ByDaysPeriod(p))
-
-var total = calcTotal(byDays)
-
-	return total, nil
+	return TotalByPeriod(byCategory, p), nil // Filter(byCategory, ByDaysPeriod(p))
 }
