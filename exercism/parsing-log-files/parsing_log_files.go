@@ -9,8 +9,6 @@ func IsValidLine(text string) bool {
 }
 
 func SplitLogLine(text string) []string {
-	//panic("Please implement the SplitLogLine function")
-	//ReplaceAllString
 	return regexp.MustCompile(`<[*~=-]*>`).Split(text, -1)
 }
 
