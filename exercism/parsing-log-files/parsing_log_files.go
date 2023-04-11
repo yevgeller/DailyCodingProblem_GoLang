@@ -5,7 +5,6 @@ import (
 )
 
 func IsValidLine(text string) bool {
-	//panic("Please implement the IsValidLine function")
 	return regexp.MustCompile(`^\[(TRC|DBG|INF|WRN|ERR||FTL)\]`).MatchString(text)
 }
 
