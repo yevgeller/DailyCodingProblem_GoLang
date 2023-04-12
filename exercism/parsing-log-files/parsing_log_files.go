@@ -28,7 +28,6 @@ func RemoveEndOfLineText(text string) string {
 }
 
 func TagWithUserName(lines []string) []string {
-	//panic("Please implement the TagWithUserName function")
 	var tagged []string
 	re := regexp.MustCompile(`User\s+([A-Za-z0-9]*)`)
 	for _, line := range lines {
