@@ -18,6 +18,7 @@ use (
 	./exercism/interest-is-interesting
 	./exercism/lasagna-master
 	./exercism/logs-logs-logs
+	./exercism/meteorology
 	./exercism/need-for-speed
 	./exercism/parsing-log-files
 	./exercism/party-robot
