@@ -7,11 +7,10 @@ func Distance(a, b string) (int, error) {
 		return 0, errors.New("incomparable lengths")
 	}
 	count := 0
-	for i, _ := range a {
+	for i := range a {
 		if a[i] != b[i] {
 			count++
 		}
-		//fmt.Printf("%d %c %c\n", i, str[i], elem)
 	}
 	return count, nil
 }
