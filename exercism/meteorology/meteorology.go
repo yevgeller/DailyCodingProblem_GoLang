@@ -1,19 +1,19 @@
-// package meteorology
+package meteorology
 
 // import "fmt"
 
-// type TemperatureUnit int
+type TemperatureUnit int
 
-// const (
-// 	Celsius    TemperatureUnit = 0
-// 	Fahrenheit TemperatureUnit = 1
-// )
+const (
+	Celsius    TemperatureUnit = 0
+	Fahrenheit TemperatureUnit = 1
+)
 
-// // Add a String method to the TemperatureUnit type
-// func (tu TemperatureUnit) String() string {
-// 	units := []string{"°C", "°F"}
-// 	return units[tu]
-// }
+// Add a String method to the TemperatureUnit type
+func (tu TemperatureUnit) String() string {
+	units := []string{"°C", "°F"}
+	return units[tu]
+}
 
 // type Temperature struct {
 // 	degree int
