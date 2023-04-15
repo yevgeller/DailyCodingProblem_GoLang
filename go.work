@@ -22,6 +22,7 @@ use (
 	./exercism/need-for-speed
 	./exercism/parsing-log-files
 	./exercism/party-robot
+	./exercism/raindrops
 	./exercism/sorting-room
 	./exercism/the-farm
 	./exercism/vehicle-purchase
