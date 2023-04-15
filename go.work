@@ -14,6 +14,7 @@ use (
 	./exercism/election-day
 	./exercism/elons-toys
 	./exercism/expenses
+	./exercism/gigasecond
 	./exercism/gross-store
 	./exercism/interest-is-interesting
 	./exercism/lasagna-master
