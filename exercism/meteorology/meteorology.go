@@ -26,19 +26,19 @@ func (t Temperature) String() string {
 	return fmt.Sprintf("%v %v", t.degree, t.unit.String())
 }
 
-// type SpeedUnit int
+type SpeedUnit int
 
-// const (
-// 	KmPerHour    SpeedUnit = 0
-// 	MilesPerHour SpeedUnit = 1
-// )
+const (
+	KmPerHour    SpeedUnit = 0
+	MilesPerHour SpeedUnit = 1
+)
 
-// // Add a String method to SpeedUnit
+// Add a String method to SpeedUnit
 
-// func (su SpeedUnit) String() string {
-// 	units := []string{"km/h", "mph"}
-// 	return units[su]
-// }
+func (su SpeedUnit) String() string {
+	units := []string{"km/h", "mph"}
+	return units[su]
+}
 
 // type Speed struct {
 // 	magnitude int
