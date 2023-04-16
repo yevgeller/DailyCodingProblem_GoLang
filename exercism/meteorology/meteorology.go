@@ -1,6 +1,6 @@
 package meteorology
 
-// import "fmt"
+ import "fmt"
 
 type TemperatureUnit int
 
