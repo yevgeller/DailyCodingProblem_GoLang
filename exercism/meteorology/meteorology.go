@@ -15,16 +15,16 @@ func (tu TemperatureUnit) String() string {
 	return units[tu]
 }
 
-// type Temperature struct {
-// 	degree int
-// 	unit   TemperatureUnit
-// }
+type Temperature struct {
+	degree int
+	unit   TemperatureUnit
+}
 
-// // Add a String method to the Temperature type
+// Add a String method to the Temperature type
 
-// func (t Temperature) String() string {
-// 	return fmt.Sprintf("%v %v", t.degree, t.unit.String())
-// }
+func (t Temperature) String() string {
+	return fmt.Sprintf("%v %v", t.degree, t.unit.String())
+}
 
 // type SpeedUnit int
 
