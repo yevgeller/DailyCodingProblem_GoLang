@@ -20,7 +20,6 @@ type Temperature struct {
 	unit   TemperatureUnit
 }
 
-// Add a String method to the Temperature type
 
 func (t Temperature) String() string {
 	return fmt.Sprintf("%v %v", t.degree, t.unit.String())
