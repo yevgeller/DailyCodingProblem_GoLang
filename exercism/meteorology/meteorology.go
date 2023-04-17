@@ -1,6 +1,6 @@
 package meteorology
 
- import "fmt"
+import "fmt"
 
 type TemperatureUnit int
 
@@ -18,7 +18,6 @@ type Temperature struct {
 	degree int
 	unit   TemperatureUnit
 }
-
 
 func (t Temperature) String() string {
 	return fmt.Sprintf("%v %v", t.degree, t.unit.String())
