@@ -30,7 +30,6 @@ const (
 	MilesPerHour SpeedUnit = 1
 )
 
-
 func (su SpeedUnit) String() string {
 	units := []string{"km/h", "mph"}
 	return units[su]
@@ -54,7 +53,6 @@ type MeteorologyData struct {
 	humidity      int
 }
 
-// Add a String method to MeteorologyData
 func (md MeteorologyData) String() string {
 	return fmt.Sprintf("%v: %v, Wind %v at %v, %v%% Humidity", md.location, md.temperature.String(), md.windDirection, md.windSpeed.String(), md.humidity)
 }
