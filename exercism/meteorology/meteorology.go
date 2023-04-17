@@ -37,15 +37,15 @@ func (su SpeedUnit) String() string {
 	return units[su]
 }
 
-// type Speed struct {
-// 	magnitude int
-// 	unit      SpeedUnit
-// }
+type Speed struct {
+	magnitude int
+	unit      SpeedUnit
+}
 
-// // Add a String method to Speed
-// func (s Speed) String() string {
-// 	return fmt.Sprintf("%v %v", s.magnitude, s.unit.String())
-// }
+// Add a String method to Speed
+func (s Speed) String() string {
+	return fmt.Sprintf("%v %v", s.magnitude, s.unit.String())
+}
 
 // type MeteorologyData struct {
 // 	location      string
