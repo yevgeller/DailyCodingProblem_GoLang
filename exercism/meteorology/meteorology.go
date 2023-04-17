@@ -30,7 +30,6 @@ const (
 	MilesPerHour SpeedUnit = 1
 )
 
-// Add a String method to SpeedUnit
 
 func (su SpeedUnit) String() string {
 	units := []string{"km/h", "mph"}
