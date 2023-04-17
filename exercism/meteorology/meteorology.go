@@ -47,15 +47,15 @@ func (s Speed) String() string {
 	return fmt.Sprintf("%v %v", s.magnitude, s.unit.String())
 }
 
-// type MeteorologyData struct {
-// 	location      string
-// 	temperature   Temperature
-// 	windDirection string
-// 	windSpeed     Speed
-// 	humidity      int
-// }
+type MeteorologyData struct {
+	location      string
+	temperature   Temperature
+	windDirection string
+	windSpeed     Speed
+	humidity      int
+}
 
-// // Add a String method to MeteorologyData
-// func (md MeteorologyData) String() string {
-// 	return fmt.Sprintf("%v: %v, Wind %v at %v, %v%% Humidity", md.location, md.temperature.String(), md.windDirection, md.windSpeed.String(), md.humidity)
-// }
+// Add a String method to MeteorologyData
+func (md MeteorologyData) String() string {
+	return fmt.Sprintf("%v: %v, Wind %v at %v, %v%% Humidity", md.location, md.temperature.String(), md.windDirection, md.windSpeed.String(), md.humidity)
+}
