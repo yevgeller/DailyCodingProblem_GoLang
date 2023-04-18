@@ -72,7 +72,7 @@ func calcTotal(in []Record) float64 {
 func CategoryExpenses(in []Record, p DaysPeriod, c string) (float64, error) {
 	var byCategory = Filter(in, ByCategory(c))
 	if len(byCategory) == 0 {
-		return 0.0, errors.New("unknown category ")
+		return 0.0, errors.New("unknown category")
 	}
 	return TotalByPeriod(byCategory, p), nil
 }
