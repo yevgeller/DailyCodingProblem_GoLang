@@ -40,7 +40,6 @@ type Speed struct {
 	unit      SpeedUnit
 }
 
-// Add a String method to Speed
 func (s Speed) String() string {
 	return fmt.Sprintf("%v %v", s.magnitude, s.unit.String())
 }
