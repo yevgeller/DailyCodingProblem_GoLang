@@ -11,6 +11,7 @@ use (
 	./exercism/cars-assemble
 	./exercism/census
 	./exercism/chessboard
+	./exercism/collatz-conjecture
 	./exercism/election-day
 	./exercism/elons-toys
 	./exercism/expenses
