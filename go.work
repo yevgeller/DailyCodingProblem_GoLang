@@ -17,6 +17,7 @@ use (
 	./exercism/expenses
 	./exercism/gigasecond
 	./exercism/gross-store
+	./exercism/hamming
 	./exercism/interest-is-interesting
 	./exercism/lasagna-master
 	./exercism/logs-logs-logs
