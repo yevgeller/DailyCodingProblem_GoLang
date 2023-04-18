@@ -5,7 +5,6 @@ import (
 )
 
 func CollatzConjecture(n int) (int, error) {
-	//panic("Please implement the CollatzConjecture function")
 	var count = 0
 	if n <= 0 {
 		return 0, errors.New("error")
