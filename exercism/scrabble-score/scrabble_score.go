@@ -3,14 +3,12 @@ package scrabble
 import ("strings")
 
 func Score(word string) int {
-	//panic("Please implement the Score function")
     total := 0
     chars := loadMap()
     
     for _, r := range word {
     score := chars[strings.ToUpper(string(r))]    
         total += score
-        //fmt.Println(i, r, string(r))
     }
 
     return total
