@@ -26,6 +26,7 @@ use (
 	./exercism/parsing-log-files
 	./exercism/party-robot
 	./exercism/raindrops
+	./exercism/scrabble-score
 	./exercism/sorting-room
 	./exercism/the-farm
 	./exercism/vehicle-purchase
