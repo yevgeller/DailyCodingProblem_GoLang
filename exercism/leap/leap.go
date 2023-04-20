@@ -13,7 +13,6 @@ func IsLeapYear(year int) bool {
 	// If you leave them in, reviewers may protest!
 	return year % 4 == 0 && year % 100 != 0 || year % 100 == 0 && year % 400 == 0
 	
-	//panic("Please implement the IsLeapYear function")
 
 
 }
