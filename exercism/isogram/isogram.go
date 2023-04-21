@@ -10,12 +10,9 @@ func isLetter(c rune) bool {
 }
 
 func IsIsogram(word string) bool {
-	//panic("Please implement the IsIsogram function")
 	m := map[string]int{}
 	fmt.Printf("Word: %s\n", word)
 	for _, r := range word {
-		//fmt.Printf("letter %s", string(r))
-		//		if isLetter(r) {
 		if ('a' <= r && r <= 'z') || ('A' <= r && r <= 'Z') {
 
 			letter := strings.ToUpper(string(r))
