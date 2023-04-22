@@ -1,7 +1,6 @@
 package scrabble
 
 import (
-	"fmt"
 	"strings"
 )
 
