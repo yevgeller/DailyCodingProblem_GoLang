@@ -1,7 +1,6 @@
 package diffsquares
 
 func SquareOfSum(n int) int {
-	//panic("Please implement the SquareOfSum function")
     return (n*(n+1)/2)*(n*(n+1)/2)
 }
 
