@@ -24,6 +24,7 @@ use (
 	./exercism/lasagna-master
 	./exercism/leap
 	./exercism/logs-logs-logs
+	./exercism/luhn
 	./exercism/meteorology
 	./exercism/need-for-speed
 	./exercism/parsing-log-files
