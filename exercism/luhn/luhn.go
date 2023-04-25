@@ -1,12 +1,27 @@
 package luhn
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func Valid(id string) bool {
 	//panic("Please implement the Valid function")
+strLen := len(id)
+
+ongoingCtr := strLen 
+if strLen %2 == 1 {
+	ongoingCtr--
+}
+
+for ongoingCtr >= 0 {
+	ongoingCtr -= 2
+	fmt.p
+}
+
 	for i, r := range id {
 		if i%2 == 0 {
-			if ('a' <= r && r <= 'z') || ('A' <= r && r <= 'Z') {
+			if r {
 
 				letter := strings.ToUpper(string(r))
 
