@@ -7,25 +7,23 @@ import (
 
 func Valid(id string) bool {
 	//panic("Please implement the Valid function")
-	
+
 	cleanId := regexp.MustCompile(`[^a-zA-Z0-9 ]+`).ReplaceAllString(id, "")
 
-	
+	fmt.Println("Before: ", id, " After: ", cleanId)
+
 	strLen := len(cleanId)
 	if strLen < 2 {
 		return false
 	}
-
 
 	ongoingCtr := strLen
 	if strLen%2 == 1 {
 		ongoingCtr--
 	}
 
-
-
 	fmt.Println("Assignment: ", id, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr)
-	for ongoingCtr >= 0 {
+	for ongoingCtr > 1 {
 		ongoingCtr -= 2
 		fmt.Println(cleanId[ongoingCtr])
 	}
