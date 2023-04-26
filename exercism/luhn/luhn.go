@@ -14,6 +14,7 @@ if strLen %2 == 1 {
 	ongoingCtr--
 }
 
+fmt.Println("Assignment: " , id , " len: " , strLen , ", working with: ongoingCtr: " , ongoingCtr);
 for ongoingCtr >= 0 {
 	ongoingCtr -= 2
 	fmt.Println(id[ongoingCtr])
