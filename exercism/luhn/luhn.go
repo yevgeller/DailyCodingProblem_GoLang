@@ -2,24 +2,29 @@ package luhn
 
 import (
 	"fmt"
-	"strings"
 )
 
 func Valid(id string) bool {
 	//panic("Please implement the Valid function")
-strLen := len(id)
+	strLen := len(id)
+	if strLen < 2 {
+		fmt.Println("string of 1 or less")
+		return false
+	}
 
-ongoingCtr := strLen 
-if strLen %2 == 1 {
-	ongoingCtr--
-}
 
-fmt.Println("Assignment: " , id , " len: " , strLen , ", working with: ongoingCtr: " , ongoingCtr);
-for ongoingCtr >= 0 {
-	ongoingCtr -= 2
-	fmt.Println(id[ongoingCtr])
-}
+	ongoingCtr := strLen
+	if strLen%2 == 1 {
+		ongoingCtr--
+	}
 
+	fmt.Println("Assignment: ", id, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr)
+	for ongoingCtr >= 0 {
+		ongoingCtr -= 2
+		fmt.Println(id[ongoingCtr])
+	}
+
+	fmt.Println("--------")
 	// for i, r := range id {
 	// 	if i%2 == 0 {
 	// 		if r {
@@ -34,4 +39,6 @@ for ongoingCtr >= 0 {
 	// 		}
 	// 	}
 	// }
+
+	return true
 }
