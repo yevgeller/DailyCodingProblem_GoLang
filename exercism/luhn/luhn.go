@@ -8,7 +8,6 @@ func Valid(id string) bool {
 	//panic("Please implement the Valid function")
 	strLen := len(id)
 	if strLen < 2 {
-		fmt.Println("string of 1 or less")
 		return false
 	}
 
