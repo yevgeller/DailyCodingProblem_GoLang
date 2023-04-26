@@ -2,11 +2,16 @@ package luhn
 
 import (
 	"fmt"
+	"regexp"
 )
 
 func Valid(id string) bool {
 	//panic("Please implement the Valid function")
-	strLen := len(id)
+	
+	cleanId := regexp.MustCompile(`[^a-zA-Z0-9 ]+`).ReplaceAllString(id, "")
+
+	
+	strLen := len(cleanId)
 	if strLen < 2 {
 		return false
 	}
@@ -17,10 +22,12 @@ func Valid(id string) bool {
 		ongoingCtr--
 	}
 
+
+
 	fmt.Println("Assignment: ", id, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr)
 	for ongoingCtr >= 0 {
 		ongoingCtr -= 2
-		fmt.Println(id[ongoingCtr])
+		fmt.Println(cleanId[ongoingCtr])
 	}
 
 	fmt.Println("--------")
