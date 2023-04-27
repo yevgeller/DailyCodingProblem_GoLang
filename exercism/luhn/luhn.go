@@ -23,7 +23,7 @@ func Valid(id string) bool {
 		ongoingCtr--
 	}
 
-	fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr)
+	fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr, " starting at", string(cleanId[ongoingCtr]))
 	for ongoingCtr > 2 {
 		val, _ := strconv.Atoi(string(cleanId[ongoingCtr]))
 		fmt.Print(val, ":", ongoingCtr, " ")
