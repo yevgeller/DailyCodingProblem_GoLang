@@ -8,7 +8,7 @@ import (
 func Valid(id string) bool {
 	//panic("Please implement the Valid function")
 
-	cleanId := regexp.MustCompile(`[^a-zA-Z0-9 ]+`).ReplaceAllString(id, "")
+	cleanId := regexp.MustCompile(`[^0-9 ]+`).ReplaceAllString(id, "")
 
 	fmt.Println("Before: ", id, " After: ", cleanId)
 
