@@ -3,12 +3,13 @@ package luhn
 import (
 	"fmt"
 	"regexp"
+	"strconv"
 )
 
 func Valid(id string) bool {
 	//panic("Please implement the Valid function")
 
-	cleanId := regexp.MustCompile(`[^0-9 ]+`).ReplaceAllString(id, "")
+	cleanId := regexp.MustCompile(`[^0-9]+`).ReplaceAllString(id, "")
 
 	fmt.Println("Before: ", id, " After: ", cleanId)
 
@@ -22,13 +23,14 @@ func Valid(id string) bool {
 		ongoingCtr--
 	}
 
-	fmt.Println("Assignment: ", id, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr)
-	for ongoingCtr > 1 {
+	fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr)
+	for ongoingCtr > 2 {
+		val, _ := strconv.Atoi(string(cleanId[ongoingCtr]))
+		fmt.Print(val, ":", ongoingCtr, " ")
 		ongoingCtr -= 2
-		fmt.Println(cleanId[ongoingCtr])
 	}
 
-	fmt.Println("--------")
+	fmt.Println("\n--------")
 	// for i, r := range id {
 	// 	if i%2 == 0 {
 	// 		if r {
