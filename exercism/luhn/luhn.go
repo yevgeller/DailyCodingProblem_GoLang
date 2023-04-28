@@ -19,36 +19,32 @@ func Valid(id string) bool {
 	}
 
 	ongoingCtr := strLen - 1
-	// if strLen%2 == 1 {
-	// 	ongoingCtr--
-	// }
 
 	fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr, " starting at", string(cleanId[ongoingCtr]))
+	sum := 0
+
 	for ongoingCtr > 0 {
 		val, _ := strconv.Atoi(string(cleanId[ongoingCtr]))
 		if ongoingCtr%2 == 1 {
-			fmt.Print("Working: ", val, " at pos ", ongoingCtr, ", ")
+			digit := processDigit(val)
+			fmt.Print("Added processed", digit)
+			sum += digit
+			//fmt.Print("Working: ", val, " at pos ", ongoingCtr, ", ")
 		} else {
-			fmt.Print("Skipping ", val, " at pos ", ongoingCtr, ", ")
+			fmt.Print("Added unprocessed ", val)
+			sum += val
+			//fmt.Print("Skipping ", val, " at pos ", ongoingCtr, ", ")
 		}
 		ongoingCtr--
 	}
 
-	fmt.Println("\n--------")
-	// for i, r := range id {
-	// 	if i%2 == 0 {
-	// 		if r {
+	return sum%10 == 0
+}
 
-	// 			letter := strings.ToUpper(string(r))
-
-	// 			if m[letter] != 0 {
-	// 				return false
-	// 			}
-	// 			m[letter] = 1
-
-	// 		}
-	// 	}
-	// }
-
-	return true
+func processDigit(digit int) int {
+	digit = digit * 2
+	if digit > 9 {
+		digit = digit - 9
+	}
+	return digit
 }
