@@ -35,6 +35,9 @@ func Valid(id string) bool {
 			sum += val
 			//fmt.Print("Skipping ", val, " at pos ", ongoingCtr, ", ")
 		}
+
+		fmt.Print(" Sum: ", sum, "\n")
+
 		ongoingCtr--
 	}
 
