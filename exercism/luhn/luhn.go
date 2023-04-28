@@ -24,9 +24,9 @@ func Valid(id string) bool {
 	}
 
 	fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr, " starting at", string(cleanId[ongoingCtr]))
-	for ongoingCtr > 2 {
+	for ongoingCtr > 1 {
 		val, _ := strconv.Atoi(string(cleanId[ongoingCtr]))
-		fmt.Print(val, ":", ongoingCtr, " ")
+		fmt.Print(val, " at pos ", ongoingCtr, ", ")
 		ongoingCtr -= 2
 	}
 
