@@ -18,16 +18,20 @@ func Valid(id string) bool {
 		return false
 	}
 
-	ongoingCtr := strLen
-	if strLen%2 == 1 {
-		ongoingCtr--
-	}
+	ongoingCtr := strLen - 1
+	// if strLen%2 == 1 {
+	// 	ongoingCtr--
+	// }
 
 	fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr, " starting at", string(cleanId[ongoingCtr]))
-	for ongoingCtr > 1 {
+	for ongoingCtr > 0 {
 		val, _ := strconv.Atoi(string(cleanId[ongoingCtr]))
-		fmt.Print(val, " at pos ", ongoingCtr, ", ")
-		ongoingCtr -= 2
+		if ongoingCtr%2 == 1 {
+			fmt.Print("Working: ", val, " at pos ", ongoingCtr, ", ")
+		} else {
+			fmt.Print("Skipping ", val, " at pos ", ongoingCtr, ", ")
+		}
+		ongoingCtr--
 	}
 
 	fmt.Println("\n--------")
