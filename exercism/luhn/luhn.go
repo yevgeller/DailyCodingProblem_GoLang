@@ -27,11 +27,11 @@ func Valid(id string) bool {
 		val, _ := strconv.Atoi(string(cleanId[ongoingCtr]))
 		if ongoingCtr%2 == 1 {
 			digit := processDigit(val)
-			fmt.Print("Added processed", digit)
+			fmt.Print(" P: ", digit)
 			sum += digit
 			//fmt.Print("Working: ", val, " at pos ", ongoingCtr, ", ")
 		} else {
-			fmt.Print("Added unprocessed ", val)
+			fmt.Print(" U: ", val)
 			sum += val
 			//fmt.Print("Skipping ", val, " at pos ", ongoingCtr, ", ")
 		}
