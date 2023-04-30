@@ -19,13 +19,14 @@ func Valid(id string) bool {
 	}
 
 	ongoingCtr := strLen - 1
+	posCtr := 0
 
 	fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr, " starting at", string(cleanId[ongoingCtr]))
 	sum := 0
 
 	for ongoingCtr >= 0 {
 		val, _ := strconv.Atoi(string(cleanId[ongoingCtr]))
-		if ongoingCtr%2 == 1 {
+		if posCtr%2 == 1 {
 			digit := processDigit(val)
 			fmt.Print(" P: ", digit)
 			sum += digit
@@ -39,6 +40,7 @@ func Valid(id string) bool {
 		fmt.Print(" Sum: ", sum, "\n")
 
 		ongoingCtr--
+		posCtr++
 	}
 
 	return sum%10 == 0
