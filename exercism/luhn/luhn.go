@@ -4,13 +4,20 @@ import (
 	"fmt"
 	"regexp"
 	"strconv"
+	"strings"
 )
 
 func Valid(id string) bool {
 	//panic("Please implement the Valid function")
 
-	cleanId := regexp.MustCompile(`[^0-9]+`).ReplaceAllString(id, "")
+	//cleanId := regexp.MustCompile(`[^0-9]+`).ReplaceAllString(id, "")
+	cleanId := strings.Replace(" ", "")
+	flag := regexp.MustCompile(`[^0-9]+`).MatchString(id)
 
+	if flag {
+		fmt.Println("found non-numeric characters")
+		//return false
+	}
 	fmt.Println("Before: ", id, " After: ", cleanId)
 
 	strLen := len(cleanId)
