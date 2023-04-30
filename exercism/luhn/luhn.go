@@ -11,7 +11,7 @@ func Valid(id string) bool {
 	//panic("Please implement the Valid function")
 
 	//cleanId := regexp.MustCompile(`[^0-9]+`).ReplaceAllString(id, "")
-	cleanId := strings.Replace(" ", "")
+	cleanId := strings.ReplaceAll(id, " ", "")
 	flag := regexp.MustCompile(`[^0-9]+`).MatchString(id)
 
 	if flag {
