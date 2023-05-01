@@ -15,8 +15,8 @@ func Valid(id string) bool {
 	flag := regexp.MustCompile(`[^0-9]+`).MatchString(cleanId)
 
 	if flag {
-		fmt.Println("found non-numeric characters")
-		//return false
+		//fmt.Println("found non-numeric characters")
+		return false
 	}
 	fmt.Println("Before: ", id, " After: ", cleanId)
 
