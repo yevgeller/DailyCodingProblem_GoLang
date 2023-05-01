@@ -32,8 +32,6 @@ func Valid(id string) bool {
 			sum += val
 		}
 
-		//fmt.Print(" Sum: ", sum, "\n")
-
 		ongoingCtr--
 		posCtr++
 	}
