@@ -7,17 +7,12 @@ import (
 )
 
 func Valid(id string) bool {
-	//panic("Please implement the Valid function")
-
-	//cleanId := regexp.MustCompile(`[^0-9]+`).ReplaceAllString(id, "")
 	cleanId := strings.ReplaceAll(id, " ", "")
 	flag := regexp.MustCompile(`[^0-9]+`).MatchString(cleanId)
 
 	if flag {
-		//fmt.Println("found non-numeric characters")
 		return false
 	}
-	//fmt.Println("Before: ", id, " After: ", cleanId)
 
 	strLen := len(cleanId)
 	if strLen < 2 {
@@ -26,8 +21,6 @@ func Valid(id string) bool {
 
 	ongoingCtr := strLen - 1
 	posCtr := 0
-
-	//fmt.Println("Assignment: ", cleanId, " len: ", strLen, ", working with: ongoingCtr: ", ongoingCtr, " starting at", string(cleanId[ongoingCtr]))
 	sum := 0
 
 	for ongoingCtr >= 0 {
