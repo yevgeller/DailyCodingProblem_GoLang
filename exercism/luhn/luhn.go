@@ -12,7 +12,7 @@ func Valid(id string) bool {
 
 	//cleanId := regexp.MustCompile(`[^0-9]+`).ReplaceAllString(id, "")
 	cleanId := strings.ReplaceAll(id, " ", "")
-	flag := regexp.MustCompile(`[^0-9]+`).MatchString(id)
+	flag := regexp.MustCompile(`[^0-9]+`).MatchString(cleanId)
 
 	if flag {
 		fmt.Println("found non-numeric characters")
