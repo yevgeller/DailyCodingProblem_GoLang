@@ -6,14 +6,12 @@ import (
 
 // Colors should return the list of all colors.
 func Colors() []string {
-	//panic("Please implement the Colors function")
-	a := [...]string{"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"}
-	return a[0:10]
+	colors := [...]string{"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"}
+	return colors[0:10]
 }
 
 // ColorCode returns the resistance value of the given color.
 func ColorCode(color string) int {
-	//panic("Please implement the ColorCode function")
 	m := loadMap()
 
 	return m[strings.ToLower(color)]
