@@ -33,6 +33,7 @@ use (
 	./exercism/resistor-color
 	./exercism/scrabble-score
 	./exercism/sorting-room
+	./exercism/space-age
 	./exercism/the-farm
 	./exercism/vehicle-purchase
 	./exercism/weather-forecast
