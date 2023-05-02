@@ -1,5 +1,7 @@
 package space
 
+import ("strings")
+
 type Planet struct {
 	name string
 }
@@ -7,7 +9,7 @@ type Planet struct {
 func Age(seconds float64, planet Planet) float64 {
 	//panic("Please implement the Age function")
 
-	if planet.ToLower() == "earth" {
+	if strings.ToLower(planet.name) == "earth" {
 
 	}
 }
