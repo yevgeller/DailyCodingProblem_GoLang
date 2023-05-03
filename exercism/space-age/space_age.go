@@ -3,10 +3,8 @@ package space
 type Planet string
 
 func Age(seconds float64, planet Planet) float64 {
-	//panic("Please implement the Age function")
 
 	earthAge := seconds / 31557600
-	//lowercasePlanetName := strings.ToLower(planet)
 
 	switch planet {
 	case "Earth":
