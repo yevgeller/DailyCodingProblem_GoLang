@@ -1,13 +1,5 @@
 package space
 
-// import (
-// 	"strings"
-// )
-
-// type Planet struct {
-// 	name string
-// }
-
 type Planet string
 
 func Age(seconds float64, planet Planet) float64 {
