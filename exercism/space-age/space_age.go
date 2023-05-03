@@ -9,7 +9,11 @@ type Planet struct {
 func Age(seconds float64, planet Planet) float64 {
 	//panic("Please implement the Age function")
 
-	if strings.ToLower(planet.name) == "earth" {
+	earthAge := seconds / 31557600
 
-	}
+switch(strings.ToLower(planet.name))
+
+	if strings.ToLower(planet.name) == "earth" {
+return earthAge
+	} 
 }
