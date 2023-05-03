@@ -1,19 +1,39 @@
 package space
 
-import ("strings")
+// import (
+// 	"strings"
+// )
 
-type Planet struct {
-	name string
-}
+// type Planet struct {
+// 	name string
+// }
+
+type Planet string
 
 func Age(seconds float64, planet Planet) float64 {
 	//panic("Please implement the Age function")
 
 	earthAge := seconds / 31557600
+	//lowercasePlanetName := strings.ToLower(planet)
 
-switch(strings.ToLower(planet.name))
-
-	if strings.ToLower(planet.name) == "earth" {
-return earthAge
-	} 
+	switch planet {
+	case "Earth":
+		return earthAge
+	case "Mercury":
+		return earthAge / 0.2408467
+	case "Venus":
+		return earthAge / 0.61519726
+	case "Mars":
+		return earthAge / 1.8808158
+	case "Jupiter":
+		return earthAge / 11.862615
+	case "Saturn":
+		return earthAge / 29.447498
+	case "Uranus":
+		return earthAge / 84.016846
+	case "Neptune":
+		return earthAge / 164.79132
+	default:
+		return -1.0
+	}
 }
