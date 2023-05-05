@@ -27,6 +27,7 @@ use (
 	./exercism/luhn
 	./exercism/meteorology
 	./exercism/need-for-speed
+	./exercism/nucleotide-count
 	./exercism/parsing-log-files
 	./exercism/party-robot
 	./exercism/raindrops
