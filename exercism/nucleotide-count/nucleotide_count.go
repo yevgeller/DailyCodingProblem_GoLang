@@ -5,7 +5,7 @@ package dna
 type Histogram string
 
 // DNA is a list of nucleotides. Choose a suitable data type.
-type DNA
+type DNA map[string]int
 
 // Counts generates a histogram of valid nucleotides in the given DNA.
 // Returns an error if d contains an invalid nucleotide.
