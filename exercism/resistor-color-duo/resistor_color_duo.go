@@ -4,8 +4,6 @@ import "strings"
 
 // Value should return the resistance value of a resistor with a given colors.
 func Value(colors []string) int {
-	//panic("Implement the Value function")
-
 	m := loadMap()
 	sum := m[strings.ToLower(colors[0])] * 10
 	if len(colors) > 1 {
