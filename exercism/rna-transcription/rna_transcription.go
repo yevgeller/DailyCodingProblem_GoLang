@@ -1,7 +1,6 @@
 package strand
 
 func ToRNA(dna string) string {
-	//panic("Please implement the ToRNA function")
 	ret := ""
 	for _, nuc := range dna {
 		switch nuc {
