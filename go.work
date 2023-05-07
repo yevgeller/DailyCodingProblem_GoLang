@@ -28,6 +28,7 @@ use (
 	./exercism/meteorology
 	./exercism/need-for-speed
 	./exercism/nucleotide-count
+	./exercism/pangram
 	./exercism/parsing-log-files
 	./exercism/party-robot
 	./exercism/raindrops
