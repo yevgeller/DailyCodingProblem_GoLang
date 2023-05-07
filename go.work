@@ -33,6 +33,7 @@ use (
 	./exercism/raindrops
 	./exercism/resistor-color
 	./exercism/resistor-color-duo
+	./exercism/rna-transcription
 	./exercism/scrabble-score
 	./exercism/sorting-room
 	./exercism/space-age
