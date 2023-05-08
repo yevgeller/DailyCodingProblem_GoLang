@@ -34,6 +34,7 @@ use (
 	./exercism/raindrops
 	./exercism/resistor-color
 	./exercism/resistor-color-duo
+	./exercism/reverse-string
 	./exercism/rna-transcription
 	./exercism/scrabble-score
 	./exercism/sorting-room
