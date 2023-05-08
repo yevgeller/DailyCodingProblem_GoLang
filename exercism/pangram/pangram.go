@@ -8,8 +8,7 @@ import (
 func IsPangram(input string) bool {
 	input = strings.ToLower(input)
 	input = regexp.MustCompile(`[^a-z]+`).ReplaceAllString(input, "")
-	//input = strings.Replace(input, " ", "", -1)
-	input = strings.ToLower(input)
+	input = strings.ToLower(input) //<--
 	if len(input) < 26 {
 		return false
 	}
