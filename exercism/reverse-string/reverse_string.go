@@ -3,17 +3,22 @@ package reverse
 import "fmt"
 
 func Reverse(input string) string {
-	res := make([]byte, len(input))
-	prevPos, resPos := 0, len(input)
-	for pos := range input {
-		resPos -= pos - prevPos
-		copy(res[resPos:], input[prevPos:pos])
-		prevPos = pos
-		fmt.Println("pos: ", pos, " resPos: ", resPos, ", res[resPos:]", res[resPos:], ", input[prevPos:pos]", input[prevPos:pos],
-			", prevPos: ", prevPos)
+	fmt.Println("assignment: ", input)
+	result := make([]byte, len(input))
+	left, right := 0, len(input)
+	for current := range input {
+		fmt.Println("left: ", left, ", current: ", current, " right: ", right, ", result[right:]", result[right:], ", input[left:current]: ", input[left:current])
+		right -= current - left
+		copy(result[right:], input[left:current])
+
+		left = current
+
 	}
-	copy(res[0:], input[prevPos:])
-	return string(res)
+	fmt.Println("left: ", left, ", current: N/A", " right: ", right, ", result[right:]", result[right:], ", input[left:len(input)-1]: ", input[left:len(input)-1])
+	fmt.Println("result[0:]", result[0:])
+	copy(result[0:], input[left:])
+	fmt.Println()
+	return string(result)
 
 	// fmt.Println("return: ", ret)
 	// return ret
