@@ -1,6 +1,5 @@
 package reverse
 
-// import "fmt"
 func Reverse(input string) string {
 	//panic("Please implement the Reverse function")
 	//ret := ""
