@@ -20,6 +20,4 @@ func Reverse(input string) string {
 	fmt.Println()
 	return string(result)
 
-	// fmt.Println("return: ", ret)
-	// return ret
 }
