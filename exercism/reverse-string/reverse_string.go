@@ -1,11 +1,10 @@
 package reverse
 
-import "fmt"
-
 func Reverse(input string) string {
 	result := make([]byte, len(input))
 	left, right := 0, len(input)
-	for current := range input {right -= current - left
+	for current := range input {
+		right -= current - left
 		copy(result[right:], input[left:current])
 
 		left = current
