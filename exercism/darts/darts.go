@@ -2,11 +2,9 @@ package darts
 
 import "math"
 
-func Score(x, y float64) int { //1, 5, 10
-	//panic("Please implement the Score function")
+func Score(x, y float64) int {
+
 	len := math.Sqrt(x*x + y*y)
-	//absX := math.Abs(x)
-	//absY := math.Abs(y)
 
 	if len <= 1 {
 		return 10
