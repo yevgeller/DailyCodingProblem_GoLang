@@ -16,7 +16,6 @@ func (i Ints) Keep(filter func(int) bool) Ints {
 }
 
 func (i Ints) Discard(filter func(int) bool) Ints {
-	//panic("Please implement the Discard function")
 	ret := []int(nil)
 
 	for _, i := range i {
