@@ -5,7 +5,6 @@ type Lists [][]int
 type Strings []string
 
 func (i Ints) Keep(filter func(int) bool) Ints {
-	//panic("Please implement the Keep function")
 	ret := []int(nil)
 
 	for _, i := range i {
