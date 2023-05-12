@@ -40,6 +40,7 @@ use (
 	./exercism/scrabble-score
 	./exercism/sorting-room
 	./exercism/space-age
+	./exercism/strain
 	./exercism/the-farm
 	./exercism/vehicle-purchase
 	./exercism/weather-forecast
