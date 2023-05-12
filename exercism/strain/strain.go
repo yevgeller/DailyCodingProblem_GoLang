@@ -27,7 +27,6 @@ func (i Ints) Discard(filter func(int) bool) Ints {
 }
 
 func (l Lists) Keep(filter func([]int) bool) Lists {
-	//panic("Please implement the Keep function")
 	ret := [][]int(nil)
 
 	for _, i := range l {
