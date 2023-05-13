@@ -16,6 +16,7 @@ use (
 	./exercism/difference-of-squares
 	./exercism/election-day
 	./exercism/elons-toys
+	./exercism/etl
 	./exercism/expenses
 	./exercism/gigasecond
 	./exercism/gross-store
