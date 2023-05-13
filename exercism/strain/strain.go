@@ -47,7 +47,3 @@ func (s Strings) Keep(filter func(string) bool) Strings {
 	}
 	return ret
 }
-
-// func filter(int) bool {
-// 	return
-// }
