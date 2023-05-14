@@ -6,8 +6,8 @@ func Transform(in map[int][]string) map[string]int {
 
 	for k, v := range in {
 		// k - key, v -value
-		for a := range v {
-			ret[a] = k
+		for _, b := range v {
+			ret[b] = k
 		}
 	}
 	return ret
