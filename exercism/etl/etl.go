@@ -13,5 +13,4 @@ func Transform(in map[int][]string) map[string]int {
 		}
 	}
 	return ret
-	//return make(map[string]int)
 }
