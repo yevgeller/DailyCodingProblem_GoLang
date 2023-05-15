@@ -6,6 +6,7 @@ use (
 	./exercism/animal-magic
 	./exercism/bird-watcher
 	./exercism/blackjack
+	./exercism/bob
 	./exercism/booking-up-for-beauty
 	./exercism/card-tricks
 	./exercism/cars-assemble
