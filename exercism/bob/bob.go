@@ -5,7 +5,10 @@
 // https://golang.org/doc/effective_go.html#commentary
 package bob
 
-import "strings"
+import (
+	"strings"
+	"unicode"
+)
 
 // Hey should have a comment documenting it.
 func Hey(remark string) string {
@@ -14,5 +17,9 @@ func Hey(remark string) string {
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
 	isQuestion := strings.HasSuffix("?")
+	isAllLower := unicode.IsLower(remark)
+
+	if isQuestion && !isAllLower
+
 	return ""
 }
