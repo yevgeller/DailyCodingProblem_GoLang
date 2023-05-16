@@ -17,9 +17,23 @@ func Hey(remark string) string {
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
 	isQuestion := strings.HasSuffix("?")
-	isAllLower := unicode.IsLower(remark)
+	isAllUpper := unicode.IsUpper(remark)
 
-	if isQuestion && !isAllLower
+	if isQuestion && !isAllUpper {
+		return "Sure."
+	}
 
-	return ""
+	if !isQuestion && isAllUpper {
+		return "Whoa, chill out!"
+	}
+
+	if isQuestion && isAllUpper {
+		return "Calm down, I know what I'm doing!"
+	}
+
+	if len(remark) == 0 {
+		return "Fine. Be that way!"
+	}
+
+	return "Whatever."
 }
