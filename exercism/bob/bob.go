@@ -7,7 +7,6 @@ package bob
 
 import (
 	"strings"
-	"unicode"
 )
 
 // Hey should have a comment documenting it.
@@ -16,8 +15,12 @@ func Hey(remark string) string {
 	// Then remove all the stock comments.
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
-	isQuestion := strings.HasSuffix("?")
-	isAllUpper := unicode.IsUpper(remark)
+	if len(strings.TrimSpace(remark)) == 0 {
+		return "Fine. Be that way!"
+	}
+
+	isQuestion := strings.HasSuffix(strings.TrimSpace(remark), "?")
+	isAllUpper := strings.ToUpper(remark) == remark
 
 	if isQuestion && !isAllUpper {
 		return "Sure."
