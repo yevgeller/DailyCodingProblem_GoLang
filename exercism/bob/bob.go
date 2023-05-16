@@ -23,6 +23,10 @@ func Hey(remark string) string {
 	isAllUpper := strings.ToUpper(remark) == remark
 	isAllLower := strings.ToLower(remark) == remark
 
+	if isAllUpper && isAllLower {
+		isAllUpper = false
+	}
+
 	if isQuestion && !isAllUpper {
 		return "Sure."
 	}
