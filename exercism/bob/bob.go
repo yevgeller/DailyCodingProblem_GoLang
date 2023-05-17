@@ -17,11 +17,6 @@ func Hey(remark string) string {
 
 	isQuestion := strings.HasSuffix(strings.TrimSpace(remark), "?")
 	isAllUpper := strings.ToUpper(remark) == remark && strings.ToLower(remark) != remark
-	isAllLower := 
-
-	if isAllUpper && isAllLower {
-		isAllUpper = false
-	}
 
 	if isQuestion && !isAllUpper {
 		return "Sure."
@@ -35,9 +30,9 @@ func Hey(remark string) string {
 		return "Calm down, I know what I'm doing!"
 	}
 
-	if len(remark) == 0 {
-		return "Fine. Be that way!"
-	}
+	// if len(remark) == 0 {
+	// 	return "Fine. Be that way!"
+	// }
 
 	return "Whatever."
 }
