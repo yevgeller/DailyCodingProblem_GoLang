@@ -16,8 +16,8 @@ func Hey(remark string) string {
 	}
 
 	isQuestion := strings.HasSuffix(strings.TrimSpace(remark), "?")
-	isAllUpper := strings.ToUpper(remark) == remark
-	isAllLower := strings.ToLower(remark) == remark
+	isAllUpper := strings.ToUpper(remark) == remark && strings.ToLower(remark) != remark
+	isAllLower := 
 
 	if isAllUpper && isAllLower {
 		isAllUpper = false
