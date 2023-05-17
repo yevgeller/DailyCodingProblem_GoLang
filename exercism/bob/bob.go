@@ -30,9 +30,5 @@ func Hey(remark string) string {
 		return "Calm down, I know what I'm doing!"
 	}
 
-	// if len(remark) == 0 {
-	// 	return "Fine. Be that way!"
-	// }
-
 	return "Whatever."
 }
