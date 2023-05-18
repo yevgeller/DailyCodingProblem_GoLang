@@ -20,6 +20,7 @@ use (
 	./exercism/etl
 	./exercism/expenses
 	./exercism/gigasecond
+	./exercism/grains
 	./exercism/gross-store
 	./exercism/hamming
 	./exercism/interest-is-interesting
