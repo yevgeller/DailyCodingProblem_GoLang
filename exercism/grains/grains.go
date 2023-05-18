@@ -9,4 +9,5 @@ func Square(number int) (uint64, error) {
 
 func Total() uint64 {
 	//panic("Please implement the Total function")
+	return uint64(math.Pow(2, 64))
 }
