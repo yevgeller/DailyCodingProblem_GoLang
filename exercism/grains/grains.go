@@ -4,7 +4,7 @@ import "math"
 
 func Square(number int) (uint64, error) {
 	//panic("Please implement the Square function")
-	return uint64(math.Pow(2, number)), _
+	return uint64(math.Pow(2, float64(number))), nil
 }
 
 func Total() uint64 {
