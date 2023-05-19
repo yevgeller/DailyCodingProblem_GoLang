@@ -6,7 +6,6 @@ import (
 )
 
 func Square(number int) (uint64, error) {
-	//panic("Please implement the Square function")
 	if number <= 0 || number > 64 {
 		return 0, errors.New("bleh")
 	}
