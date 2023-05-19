@@ -16,7 +16,6 @@ func Square(number int) (uint64, error) {
 }
 
 func Total() uint64 {
-	//panic("Please implement the Total function")
 	return math.MaxUint64
 	//return uint64(1 + math.Pow(2, 65))
 }
