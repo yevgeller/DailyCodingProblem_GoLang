@@ -4,8 +4,10 @@ import "fmt"
 
 func IsValidISBN(isbn string) bool {
 	//panic("Please implement the IsValidISBN function")
-	for i, c := range isbn {
-		fmt.Println(i, " => ", string(c))
+	counter := 10
+	for _, c := range isbn {
+		
+		fmt.Println(int64(c))
 	}
 
 	return true
