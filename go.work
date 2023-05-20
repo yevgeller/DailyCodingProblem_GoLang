@@ -24,6 +24,7 @@ use (
 	./exercism/gross-store
 	./exercism/hamming
 	./exercism/interest-is-interesting
+	./exercism/isbn-verifier
 	./exercism/isogram
 	./exercism/lasagna-master
 	./exercism/leap
