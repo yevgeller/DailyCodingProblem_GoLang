@@ -1,7 +1,6 @@
 package isbn
 
 import (
-	"fmt"
 	"regexp"
 	"strconv"
 )
@@ -14,7 +13,7 @@ func IsValidISBN(isbn string) bool {
 	}
 	counter := 10
 	total := 0
-	fmt.Println("Assignment: ", isbn)
+	//fmt.Println("Assignment: ", isbn)
 	for _, c := range isbn {
 		//fmt.Println(string(c))
 
@@ -33,6 +32,6 @@ func IsValidISBN(isbn string) bool {
 		// }
 		// fmt.Println(int64(c))
 	}
-	fmt.Println("Total: ", total, " Result: ", total%11 == 0)
+	//fmt.Println("Total: ", total, " Result: ", total%11 == 0)
 	return counter == 0 && total%11 == 0
 }
