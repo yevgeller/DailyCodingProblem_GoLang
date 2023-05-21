@@ -1,14 +1,16 @@
 package isbn
 
 import (
+	"fmt"
 	"regexp"
 	"strconv"
 )
 
 func IsValidISBN(isbn string) bool {
 	//panic("Please implement the IsValidISBN function")
-	flag := regexp.MustCompile(`[0-9\-X]+`).MatchString(isbn)
+	flag := regexp.MustCompile(`[X0-9\-]+`).MatchString(isbn)
 	if !flag {
+		fmt.Println("Failed: ", isbn)
 		return false
 	}
 	counter := 10
@@ -18,6 +20,10 @@ func IsValidISBN(isbn string) bool {
 		//fmt.Println(string(c))
 
 		if s, err := strconv.Atoi(string(c)); err == nil || counter == 1 && string(c) == "X" {
+
+			if err != nil && counter > 1 && string(c) != "X" {
+				return false
+			}
 			//fmt.Printf("%T, %v", s, s)
 			if string(c) == "X" {
 				s = 10
