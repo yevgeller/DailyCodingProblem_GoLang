@@ -8,7 +8,7 @@ import (
 
 func IsValidISBN(isbn string) bool {
 	//panic("Please implement the IsValidISBN function")
-	flag := regexp.MustCompile(`[X0-9\-]+`).MatchString(isbn)
+	flag := regexp.MustCompile(`[X 0-9\-]+`).MatchString(isbn)
 	if !flag {
 		fmt.Println("Failed: ", isbn)
 		return false
@@ -19,18 +19,26 @@ func IsValidISBN(isbn string) bool {
 	for _, c := range isbn {
 		//fmt.Println(string(c))
 
-		if s, err := strconv.Atoi(string(c)); err == nil || counter == 1 && string(c) == "X" {
-
-			if err != nil && counter > 1 && string(c) != "X" {
-				return false
-			}
-			//fmt.Printf("%T, %v", s, s)
-			if string(c) == "X" {
-				s = 10
-			}
-			total += counter * s
+		a, b := strconv.Atoi(string(c))
+		if b != nil && counter == 1 && string(c) == "X" {
+			a = 10
+		}
+		if a > 0 {
+			total += counter * a
 			counter--
 		}
+		// if s, err := strconv.Atoi(string(c)); err == nil || counter == 1 && string(c) == "X" {
+
+		// 	// if err != nil && counter > 1 && string(c) != "X" {
+		// 	// 	return false
+		// 	// }
+		// 	//fmt.Printf("%T, %v", s, s)
+		// 	if string(c) == "X" {
+		// 		s = 10
+		// 	}
+		// 	total += counter * s
+		// 	counter--
+		// }
 		//	i, err = strconv.ParseInt(string(c), 10, 32)
 		// if err == nil {
 		// 	total += i * counter
