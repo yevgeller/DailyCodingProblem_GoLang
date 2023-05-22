@@ -14,10 +14,8 @@ func IsValidISBN(isbn string) bool {
 		a, err := strconv.Atoi(string(c))
 		if counter == 1 && string(c) == "X" && err != nil {
 			a = 10
-			fmt.Println("last position is X")
 		}
 		if err != nil && string(c) != "-" && counter > 1 {
-			fmt.Println("error on ", string(c), " counter: ", counter)
 			return false
 		}
 		if a > 0 || err == nil {
