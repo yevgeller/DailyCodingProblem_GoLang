@@ -11,8 +11,6 @@ func IsValidISBN(isbn string) bool {
 	calc := ""
 	fmt.Println("Assignment: ", isbn)
 	for _, c := range isbn {
-		//fmt.Println(string(c))
-
 		a, err := strconv.Atoi(string(c))
 		if counter == 1 && string(c) == "X" && err != nil {
 			a = 10
