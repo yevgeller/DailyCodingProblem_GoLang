@@ -6,12 +6,6 @@ import (
 )
 
 func IsValidISBN(isbn string) bool {
-	//panic("Please implement the IsValidISBN function")
-	// flag := regexp.MustCompile(`[X 0-9\-]+`).MatchString(isbn)
-	// if !flag {
-	// 	fmt.Println("Failed: ", isbn)
-	// 	return false
-	// }
 	counter := 10
 	total := 0
 	calc := ""
