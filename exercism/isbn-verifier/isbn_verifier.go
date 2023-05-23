@@ -23,24 +23,6 @@ func IsValidISBN(isbn string) bool {
 			total += counter * numberCandidate
 			counter--
 		}
-		// if s, err := strconv.Atoi(string(c)); err == nil || counter == 1 && string(c) == "X" {
-
-		// 	// if err != nil && counter > 1 && string(c) != "X" {
-		// 	// 	return false
-		// 	// }
-		// 	//fmt.Printf("%T, %v", s, s)
-		// 	if string(c) == "X" {
-		// 		s = 10
-		// 	}
-		// 	total += counter * s
-		// 	counter--
-		// }
-		//	i, err = strconv.ParseInt(string(c), 10, 32)
-		// if err == nil {
-		// 	total += i * counter
-		// 	counter--
-		// }
-		// fmt.Println(int64(c))
 	}
 	fmt.Println("Total: ", total, " Result: ", total%11 == 0 && counter == 0, " calc: ", calc)
 	return counter == 0 && total%11 == 0
