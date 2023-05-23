@@ -11,16 +11,16 @@ func IsValidISBN(isbn string) bool {
 	calc := ""
 	fmt.Println("Assignment: ", isbn)
 	for _, ch := range isbn {
-		a, err := strconv.Atoi(string(ch))
+		numberCandidate, err := strconv.Atoi(string(ch))
 		if counter == 1 && string(ch) == "X" && err != nil {
-			a = 10
+			numberCandidate = 10
 		}
 		if err != nil && string(ch) != "-" && counter > 1 {
 			return false
 		}
-		if a > 0 || err == nil {
+		if numberCandidate > 0 || err == nil {
 			calc += string(ch) + "*" + strconv.Itoa(counter) + " "
-			total += counter * a
+			total += counter * numberCandidate
 			counter--
 		}
 		// if s, err := strconv.Atoi(string(c)); err == nil || counter == 1 && string(c) == "X" {
