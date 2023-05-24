@@ -1,9 +1,15 @@
 package rotationalcipher
 
+import "strings"
+
 func RotationalCipher(plain string, shiftKey int) string {
 	//panic("Please implement the RotationalCipher function")
-}
+	plainMap := createPlain()
 
+	for _, ch := range plain {
+		plainIndex := plainMap[strings.ToUpper(string(ch))]
+	}
+}
 
 func createPlain() map[string]int {
 	m := map[string]int{
