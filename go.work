@@ -41,6 +41,7 @@ use (
 	./exercism/resistor-color-duo
 	./exercism/reverse-string
 	./exercism/rna-transcription
+	./exercism/rotational-cipher
 	./exercism/scrabble-score
 	./exercism/sorting-room
 	./exercism/space-age
