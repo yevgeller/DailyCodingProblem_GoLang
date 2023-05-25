@@ -5,9 +5,11 @@ import "strings"
 func RotationalCipher(plain string, shiftKey int) string {
 	//panic("Please implement the RotationalCipher function")
 	plainMap := createPlain()
-
+	result := ""
 	for _, ch := range plain {
 		plainIndex := plainMap[strings.ToUpper(string(ch))]
+		cipheredIndex := (plainIndex + shiftKey) % len(plainMap)
+
 	}
 }
 
