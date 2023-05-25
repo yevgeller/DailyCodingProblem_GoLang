@@ -1,7 +1,6 @@
 package rotationalcipher
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -12,15 +11,13 @@ func RotationalCipher(plain string, shiftKey int) string {
 	for _, ch := range plain {
 		if isLetter(ch) {
 			plainIndex := positionByLetter[strings.ToUpper(string(ch))]
-			isUpperCase := isUpperCase(ch)               
+			isUpperCase := isUpperCase(ch)
 			cipheredIndex := (plainIndex + shiftKey) % 26
 			candidate := letterByPosition[cipheredIndex]
 			if !isUpperCase {
 				candidate = strings.ToLower(candidate)
 			}
 			result += candidate
-			fmt.Println("letter: ", string(ch), ", key: ", shiftKey, ", plainIndex: ", plainIndex, ", isUpperCase:", isUpperCase, ", cipheredIndex: ", cipheredIndex, " candidate: ", candidate)
-
 		} else {
 			result += string(ch)
 		}
