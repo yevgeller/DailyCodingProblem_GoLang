@@ -1,6 +1,11 @@
 package clock
 
+import "fmt"
 // Define the Clock type here.
+type Clock struct {
+    hour int,
+    min int
+}
 
 func New(h, m int) Clock {
 	panic("Please implement the New function")
