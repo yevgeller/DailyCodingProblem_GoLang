@@ -12,6 +12,7 @@ use (
 	./exercism/cars-assemble
 	./exercism/census
 	./exercism/chessboard
+	./exercism/clock
 	./exercism/collatz-conjecture
 	./exercism/darts
 	./exercism/difference-of-squares
