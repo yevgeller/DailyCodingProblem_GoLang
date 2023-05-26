@@ -20,5 +20,6 @@ func (c Clock) Subtract(m int) Clock {
 }
 
 func (c Clock) String() string {
-	panic("Please implement the String function")
+	 return fmt.PrintLn("%v:%v", c.hour, c.min)
+	//panic("Please implement the String function")
 }
