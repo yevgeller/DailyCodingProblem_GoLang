@@ -14,6 +14,10 @@ func New(h, m int) Clock {
 
 func (c Clock) Add(m int) Clock {
 	//panic("Please implement the Add function")
+	c.min += m
+	extraH = c.min / 60
+	c.hour = (c.hour + extraH) % 24
+	c.min = c.min % 60
 }
 
 func (c Clock) Subtract(m int) Clock {
