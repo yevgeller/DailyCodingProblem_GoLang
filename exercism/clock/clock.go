@@ -13,7 +13,7 @@ func New(h, m int) Clock {
 }
 
 func (c Clock) Add(m int) Clock {
-	panic("Please implement the Add function")
+	//panic("Please implement the Add function")
 }
 
 func (c Clock) Subtract(m int) Clock {
