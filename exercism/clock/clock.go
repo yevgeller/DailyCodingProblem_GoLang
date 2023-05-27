@@ -22,6 +22,13 @@ func (c Clock) Add(m int) Clock {
 
 func (c Clock) Subtract(m int) Clock {
 	//panic("Please implement the Subtract function")
+	c.min -= m
+	if c.min < 0 {
+		extraH = c.min / 60
+		c.hour -= extraH - 1
+		c.min %= 60
+		c.hour %= 24
+	}
 }
 
 func (c Clock) String() string {
