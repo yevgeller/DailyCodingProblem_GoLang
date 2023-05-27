@@ -21,7 +21,7 @@ func (c Clock) Add(m int) Clock {
 }
 
 func (c Clock) Subtract(m int) Clock {
-	panic("Please implement the Subtract function")
+	//panic("Please implement the Subtract function")
 }
 
 func (c Clock) String() string {
