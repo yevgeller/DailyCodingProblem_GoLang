@@ -38,19 +38,19 @@ use (
 	./exercism/yCompleted/parsing-log-files
 	./exercism/yCompleted/party-robot
 	./exercism/yCompleted/raindrops
-	./exercism/resistor-color
-	./exercism/resistor-color-duo
-	./exercism/reverse-string
-	./exercism/rna-transcription
+	./exercism/yCompleted/resistor-color
+	./exercism/yCompleted/resistor-color-duo
+	./exercism/yCompleted/reverse-string
+	./exercism/yCompleted/rna-transcription
 	./exercism/rotational-cipher
-	./exercism/scrabble-score
-	./exercism/sorting-room
-	./exercism/space-age
-	./exercism/strain
-	./exercism/the-farm
-	./exercism/vehicle-purchase
-	./exercism/weather-forecast
-	./exercism/welcome-to-tech-palace
+	./exercism/yCompleted/scrabble-score
+	./exercism/yCompleted/sorting-room
+	./exercism/yCompleted/space-age
+	./exercism/yCompleted/strain
+	./exercism/yCompleted/the-farm
+	./exercism/yCompleted/vehicle-purchase
+	./exercism/yCompleted/weather-forecast
+	./exercism/yCompleted/welcome-to-tech-palace
 	./reverse
 	./test
 	./tutorial_greetings
