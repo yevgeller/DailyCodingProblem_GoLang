@@ -19,6 +19,7 @@ func (c Clock) Add(m int) Clock {
 	extraH := c.min / 60
 	c.hour = (c.hour + extraH) % 24
 	c.min = c.min % 60
+	return c
 }
 
 func (c Clock) Subtract(m int) Clock {
@@ -30,6 +31,7 @@ func (c Clock) Subtract(m int) Clock {
 		c.min %= 60
 		c.hour %= 24
 	}
+	return c
 }
 
 func (c Clock) String() string {
