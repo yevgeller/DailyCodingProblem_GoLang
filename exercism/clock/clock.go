@@ -9,10 +9,13 @@ type Clock struct {
 }
 
 func New(h, m int) Clock {
+	if h < 0 {
+		fmt.Println("h < 0, ", h, " h%24", h%24)
+	}
 	extraH := m / 60
 	newH := (h % 24) + extraH
 	newM := m % 60
-	fmt.Println("Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
+	fmt.Println("NEW: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
 	return Clock{hour: newH, min: newM}
 	//panic("Please implement the New function")
 }
