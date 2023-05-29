@@ -12,8 +12,8 @@ func New(h, m int) Clock {
 	extraH := m / 60
 	newH := (h % 24) + extraH
 	newM := m % 60
-	return Clock{hour: newH, min: newM}
 	fmt.Println("Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
+	return Clock{hour: newH, min: newM}
 	//panic("Please implement the New function")
 }
 
