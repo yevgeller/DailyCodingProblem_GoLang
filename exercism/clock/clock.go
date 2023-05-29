@@ -9,7 +9,11 @@ type Clock struct {
 }
 
 func New(h, m int) Clock {
-	return Clock{hour: h, min: m}
+	extraH := m / 60
+	newH := (h % 24) + extraH
+	newM := m % 60
+	return Clock{hour: newH, min: newM}
+	fmt.Println("Incoming h, m: ", h, m, ", extraH: ", extraH)
 	//panic("Please implement the New function")
 }
 
@@ -35,6 +39,6 @@ func (c Clock) Subtract(m int) Clock {
 }
 
 func (c Clock) String() string {
-	return fmt.Sprintf("%v:%v", c.hour%24, c.min)
+	return fmt.Sprintf("%02d:%02d", c.hour%24, c.min%60)
 	//panic("Please implement the String function")
 }
