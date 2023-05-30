@@ -13,6 +13,9 @@ func New(h, m int) Clock {
 	// 	fmt.Println("h < 0, ", h, " h%24", h%24)
 	// }
 	extraH := m / 60
+	if m < 0 {
+		extraH -= 1
+	}
 	newH := ((h+extraH)%24 + 24) % 24
 	newM := (m%60 + 60) % 60
 	fmt.Println("NEW: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
