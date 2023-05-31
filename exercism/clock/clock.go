@@ -30,8 +30,13 @@ func New(h, m int) Clock {
 	//panic("Please implement the New function")
 }
 
+func initClock(h, m int) Clock {
+	
+}
+
 func (c Clock) Add(m int) Clock {
 	//panic("Please implement the Add function")
+	extraH = m / 60
 	c.min += m
 	extraH := c.min / 60
 	c.hour = (c.hour + extraH) % 24
