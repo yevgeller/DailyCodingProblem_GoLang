@@ -12,25 +12,25 @@ func New(h, m int) Clock {
 	// if h < 0 {
 	// 	fmt.Println("h < 0, ", h, " h%24", h%24)
 	// }
-	extraH := m / 60
-	newM := m % 60
-	if newM < 0 {
-		extraH -= 1
-		newM += 60
-	}
+	// extraH := m / 60
+	// newM := m % 60
+	// if newM < 0 {
+	// 	extraH -= 1
+	// 	newM += 60
+	// }
 
-	newH := (h + extraH) % 24
-	if newH < 0 {
-		newH += 24
-	}
+	// newH := (h + extraH) % 24
+	// if newH < 0 {
+	// 	newH += 24
+	// }
 	//newH := ((h+extraH)%24 + 24) % 24
 	//newM := (m%60 + 60) % 60
 	//fmt.Println("NEW: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
-	return initClock(h, m) //Clock{hour: newH, min: newM}
+	return initializeClock(h, m) //Clock{hour: newH, min: newM}
 	//panic("Please implement the New function")
 }
 
-func initClock(h, m int) Clock {
+func initializeClock(h, m int) Clock {
 	extraH := m / 60
 	newM := m % 60
 	if newM < 0 {
@@ -42,13 +42,13 @@ func initClock(h, m int) Clock {
 	if newH < 0 {
 		newH += 24
 	}
-	fmt.Println("INIT: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
+	//fmt.Println("INIT: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
 	return Clock{hour: newH, min: newM}
 }
 
 func (c Clock) Add(m int) Clock {
 
-	return initClock(c.hour, c.min+m)
+	return initializeClock(c.hour, c.min+m)
 
 	//panic("Please implement the Add function")
 	// extraH = m / 60
@@ -60,7 +60,7 @@ func (c Clock) Add(m int) Clock {
 }
 
 func (c Clock) Subtract(m int) Clock {
-	return initClock(c.hour, c.min-m)
+	return initializeClock(c.hour, c.min-m)
 	//panic("Please implement the Subtract function")
 	// c.min -= m
 	// if c.min < 0 {
