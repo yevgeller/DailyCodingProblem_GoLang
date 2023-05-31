@@ -25,13 +25,25 @@ func New(h, m int) Clock {
 	}
 	//newH := ((h+extraH)%24 + 24) % 24
 	//newM := (m%60 + 60) % 60
-	fmt.Println("NEW: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
-	return Clock{hour: newH, min: newM}
+	//fmt.Println("NEW: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
+	return initClock(h, m) //Clock{hour: newH, min: newM}
 	//panic("Please implement the New function")
 }
 
 func initClock(h, m int) Clock {
-	
+	extraH := m / 60
+	newM := m % 60
+	if newM < 0 {
+		extraH -= 1
+		newM += 60
+	}
+
+	newH := (h + extraH) % 24
+	if newH < 0 {
+		newH += 24
+	}
+	fmt.Println("INIT: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
+	return Clock{hour: newH, min: newM}
 }
 
 func (c Clock) Add(m int) Clock {
