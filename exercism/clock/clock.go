@@ -8,8 +8,7 @@ type Clock struct {
 }
 
 func New(h, m int) Clock {
-	return initializeClock(h, m) //Clock{hour: newH, min: newM}
-	//panic("Please implement the New function")
+	return initializeClock(h, m)
 }
 
 func initializeClock(h, m int) Clock {
