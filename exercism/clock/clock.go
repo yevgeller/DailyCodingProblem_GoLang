@@ -24,21 +24,12 @@ func initializeClock(h, m int) Clock {
 	if newH < 0 {
 		newH += 24
 	}
-	//fmt.Println("INIT: Incoming h, m: ", h, m, ", extraH: ", extraH, ", newH:", newH, ", newM: ", newM)
 	return Clock{hour: newH, min: newM}
 }
 
 func (c Clock) Add(m int) Clock {
 
 	return initializeClock(c.hour, c.min+m)
-
-	//panic("Please implement the Add function")
-	// extraH = m / 60
-	// c.min += m
-	// extraH := c.min / 60
-	// c.hour = (c.hour + extraH) % 24
-	// c.min = c.min % 60
-	// return c
 }
 
 func (c Clock) Subtract(m int) Clock {
