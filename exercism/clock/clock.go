@@ -38,5 +38,4 @@ func (c Clock) Subtract(m int) Clock {
 
 func (c Clock) String() string {
 	return fmt.Sprintf("%02d:%02d", c.hour%24, c.min%60)
-	//panic("Please implement the String function")
 }
