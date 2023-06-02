@@ -1,6 +1,9 @@
 go 1.20
 
 use (
+	./exercism/clock
+	./exercism/rotational-cipher
+	./exercism/triangle
 	./exercism/yCompleted/AnnalynsInfil
 	./exercism/yCompleted/airport-robot
 	./exercism/yCompleted/animal-magic
@@ -12,7 +15,6 @@ use (
 	./exercism/yCompleted/cars-assemble
 	./exercism/yCompleted/census
 	./exercism/yCompleted/chessboard
-	./exercism/clock
 	./exercism/yCompleted/collatz-conjecture
 	./exercism/yCompleted/darts
 	./exercism/yCompleted/difference-of-squares
@@ -42,7 +44,6 @@ use (
 	./exercism/yCompleted/resistor-color-duo
 	./exercism/yCompleted/reverse-string
 	./exercism/yCompleted/rna-transcription
-	./exercism/rotational-cipher
 	./exercism/yCompleted/scrabble-score
 	./exercism/yCompleted/sorting-room
 	./exercism/yCompleted/space-age
