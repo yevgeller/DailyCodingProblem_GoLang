@@ -7,7 +7,7 @@ package triangle
 
 
 // Notice KindFromSides() returns this type. Pick a suitable data type.
-type Kind
+type Kind int
 
 const (
     // Pick values for the following identifiers used by the test program.
@@ -23,6 +23,10 @@ func KindFromSides(a, b, c float64) Kind {
 	// Then remove all the stock comments.
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
+
+	if a > (b + c) || b > (a + c) || c > (a + b) {
+		
+	}
 	var k Kind
 	return k
 }
