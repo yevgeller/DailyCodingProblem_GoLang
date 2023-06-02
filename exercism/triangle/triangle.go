@@ -11,7 +11,7 @@ type Kind int
 
 const (
     // Pick values for the following identifiers used by the test program.
-    NaT // not a triangle
+    NaT = iota// not a triangle
     Equ // equilateral
     Iso // isosceles
     Sca // scalene
