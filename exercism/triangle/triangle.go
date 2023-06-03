@@ -22,14 +22,14 @@ func KindFromSides(a, b, c float64) Kind {
 	// Then remove all the stock comments.
 	// They're here to help you get started but they only clutter a finished solution.
 	// If you leave them in, reviewers may protest!
-	if a <= 0 || b <= 0 || c <= 0 || a > (b+c) || b > (a+c) || c > (a+b){
+	if a <= 0 || b <= 0 || c <= 0 || a > (b+c) || b > (a+c) || c > (a+b) {
 		return NaT
 	}
 	if a == b && b == c {
 		return Equ
 	}
-	if (a == b || a == c || b == c) && (a + b + c) / 3 != a {
+	if (a == b || a == c || b == c) && (a+b+c)/3 != a {
 		return Iso
 	}
-
+	return Sca
 }
