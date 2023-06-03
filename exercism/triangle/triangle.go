@@ -3,7 +3,6 @@ package triangle
 type Kind int
 
 const (
-	// Pick values for the following identifiers used by the test program.
 	NaT = iota // not a triangle
 	Equ        // equilateral
 	Iso        // isosceles
