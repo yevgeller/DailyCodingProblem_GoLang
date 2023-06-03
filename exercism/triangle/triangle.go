@@ -9,7 +9,6 @@ const (
 	Sca        // scalene
 )
 
-// KindFromSides should have a comment documenting it.
 func KindFromSides(a, b, c float64) Kind {
 	// Write some code here to pass the test suite.
 	// Then remove all the stock comments.
