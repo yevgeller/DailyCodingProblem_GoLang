@@ -1,6 +1,5 @@
 package triangle
 
-// Notice KindFromSides() returns this type. Pick a suitable data type.
 type Kind int
 
 const (
