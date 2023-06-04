@@ -8,7 +8,8 @@ import "fmt"
 // Proverb should have a comment documenting it.
 func Proverb(rhyme []string) []string {
     var ret []string
-if len(rhyme) < 2 {
+	var ln := len(rhyme)
+if ln == 0 {
     return ret
 }
     
