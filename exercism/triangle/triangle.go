@@ -10,10 +10,6 @@ const (
 )
 
 func KindFromSides(a, b, c float64) Kind {
-	// Write some code here to pass the test suite.
-	// Then remove all the stock comments.
-	// They're here to help you get started but they only clutter a finished solution.
-	// If you leave them in, reviewers may protest!
 	if a <= 0 || b <= 0 || c <= 0 || a > (b+c) || b > (a+c) || c > (a+b) {
 		return NaT
 	}
