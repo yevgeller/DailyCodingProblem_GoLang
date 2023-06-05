@@ -11,13 +11,11 @@ func Proverb(rhyme []string) []string {
 	a := 0
 
 	for a < (ln - 1) {
-		//if i < len(rhyme) {
 		ret = append(ret, fmt.Sprintf("For want of a %s the %s was lost.", rhyme[a], rhyme[a+1]))
-		//}
 		a++
 	}
 
-	ret = append(ret, fmt.Sprintf("And all for the want of a %s.", rhyme[0])) 
+	ret = append(ret, fmt.Sprintf("And all for the want of a %s.", rhyme[0]))
 	return ret
 	// Write some code here to pass the test suite.
 	// Then remove all the stock comments.
