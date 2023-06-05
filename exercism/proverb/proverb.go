@@ -23,7 +23,7 @@ func Proverb(rhyme []string) []string {
 		a++
 	}
 
-	ret = append(ret, fmt.Sprintf("And all for the want of a %s", rhyme[0])) //ADD A PERIOD HERE
+	ret = append(ret, fmt.Sprintf("And all for the want of a %s.", rhyme[0])) 
 	return ret
 	// Write some code here to pass the test suite.
 	// Then remove all the stock comments.
