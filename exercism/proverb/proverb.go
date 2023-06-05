@@ -12,12 +12,12 @@ func Proverb(rhyme []string) []string {
 if ln == 0 {
     return ret
 }
+    var a := 0
     
-    
-    for i, _ := range rhyme {
+    for a < (ln -1) {
         if i < len(rhyme) {
 		ret = append(ret, fmt.Sprintf("For want of a %s the %s was lost.",  rhyme[i], rhyme[i+1]))
-            }
+		}
     
 	}
 
