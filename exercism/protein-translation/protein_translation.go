@@ -1,5 +1,7 @@
 package protein
 
+import "strings"
+
 func FromRNA(rna string) ([]string, error) {
 	panic("Please implement the FromRNA function")
 }
