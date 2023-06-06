@@ -2,6 +2,7 @@ go 1.20
 
 use (
 	./exercism/clock
+	./exercism/protein-translation
 	./exercism/proverb
 	./exercism/rotational-cipher
 	./exercism/triangle
