@@ -33,7 +33,9 @@ func loadMap() map[string]int {
 		"UGU": "Cysteine",
 		"UGC": "Cysteine",
 		"UGG":"Tryptophan",
-		
+		"UAA": "STOP",
+		"UAG": "STOP",
+		"UGA": "STOP"
 	}
 	return m
 }
