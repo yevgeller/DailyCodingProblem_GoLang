@@ -25,10 +25,12 @@ func loadMap() map[string]int {
 		"UUA": "Leucine",
 		"UUG": "Leucine",
 		"UCU":  "Serine",
-		"blue":   6,
-		"violet": 7,
-		"grey":   8,
-		"white":  9,
+		"UCC":   "Serine",
+		"UCA": "Serine",
+		"UCG":   "Serine",
+		"UAU":  "Tyrosine",
+		"UAC": "Tyrosine",
+		"UGU": "Cysteine",
 	}
 	return m
 }
