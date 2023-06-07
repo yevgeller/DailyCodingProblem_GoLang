@@ -18,8 +18,8 @@ func ColorCode(color string) int {
 }
 
 func loadMap() map[string]int {
-	m := map[string]int{
-		"black":  0,
+	m := map[string]string{
+		"AUG":  "Methionine",
 		"brown":  1,
 		"red":    2,
 		"orange": 3,
