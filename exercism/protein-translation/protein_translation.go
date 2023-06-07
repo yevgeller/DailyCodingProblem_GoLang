@@ -20,11 +20,11 @@ func ColorCode(color string) int {
 func loadMap() map[string]int {
 	m := map[string]string{
 		"AUG":  "Methionine",
-		"brown":  1,
-		"red":    2,
-		"orange": 3,
-		"yellow": 4,
-		"green":  5,
+		"UUU":  "Phenylalanine",
+		"UUC":    "Phenylalanine",
+		"UUA": "Leucine",
+		"UUG": "Leucine",
+		"UCU":  "Serine",
 		"blue":   6,
 		"violet": 7,
 		"grey":   8,
