@@ -29,9 +29,9 @@ func FromRNA(rna string) ([]string, error) {
 }
 
 func FromCodon(codon string) (string, error) {
-m := loadMap()
+	m := loadMap()
 
-return m[codon], nil 
+	return m[codon], nil
 }
 
 // ColorCode returns the resistance value of the given color.
