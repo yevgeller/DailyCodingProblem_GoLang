@@ -29,8 +29,9 @@ func FromRNA(rna string) ([]string, error) {
 }
 
 func FromCodon(codon string) (string, error) {
-	//panic("Please implement the FromCodon function")
-	return "Methionine", nil
+m := loadMap()
+
+return m[codon], nil 
 }
 
 // ColorCode returns the resistance value of the given color.
