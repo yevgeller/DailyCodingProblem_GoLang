@@ -1,13 +1,36 @@
 package protein
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func FromRNA(rna string) ([]string, error) {
-	panic("Please implement the FromRNA function")
+	fmt.Printf("Assignment: %v ", rna)
+	//panic("Please implement the FromRNA function")
+	//ctr := 0
+	codon := ""
+	result := []string{}
+
+	for pos, char := range rna {
+		fmt.Printf("%s:%d ", string(char), pos)
+		codon = codon + string(char)
+		if (pos+1)%3 == 0 {
+			//ctr = 0
+
+			result = append(result, codon)
+			codon = ""
+		}
+		//fmt.Printf("character %c starts at byte position %d\n", char, pos)
+	}
+	fmt.Printf("%v \n", result)
+	//a := []string{}
+	return result, nil
 }
 
 func FromCodon(codon string) (string, error) {
-	panic("Please implement the FromCodon function")
+	//panic("Please implement the FromCodon function")
+	return "Methionine", nil
 }
 
 // ColorCode returns the resistance value of the given color.
