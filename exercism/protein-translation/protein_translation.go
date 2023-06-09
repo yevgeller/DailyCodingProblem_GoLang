@@ -9,7 +9,7 @@ func FromRNA(rna string) ([]string, error) {
 	//panic("Please implement the FromRNA function")
 	//ctr := 0
 	codon := ""
-	result := []string{} //rename this to codons
+	codons := []string{} //rename this to codons
 
 	for pos, char := range rna {
 		fmt.Printf("%s:%d ", string(char), pos)
@@ -17,14 +17,20 @@ func FromRNA(rna string) ([]string, error) {
 		if (pos+1)%3 == 0 {
 			//ctr = 0
 
-			result = append(result, codon)
+			codons = append(codons, codon)
 			codon = ""
 		}
 		//fmt.Printf("character %c starts at byte position %d\n", char, pos)
 	}
-	fmt.Printf("%v \n", result)
+	fmt.Printf("%v \n", codons)
 	//a := []string{}
-	return result, nil
+
+	lastCodon := ""
+	for _, codon := range codons {
+
+	}
+
+	return codons, nil
 }
 
 func FromCodon(codon string) (string, error) {
