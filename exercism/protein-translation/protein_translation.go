@@ -22,7 +22,7 @@ func FromRNA(rna string) ([]string, error) {
 		}
 		//fmt.Printf("character %c starts at byte position %d\n", char, pos)
 	}
-	fmt.Printf("%v \n", codons)
+	fmt.Printf("Codons: %v \n", codons)
 	//a := []string{}
 
 	lastCodon := ""
@@ -33,7 +33,7 @@ func FromRNA(rna string) ([]string, error) {
 			lastCodon = cdn
 		}
 	}
-
+	fmt.Printf("Result: %v \n", result)
 	return result, nil
 }
 
