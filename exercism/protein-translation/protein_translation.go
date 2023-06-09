@@ -2,7 +2,6 @@ package protein
 
 import (
 	"fmt"
-	"strings"
 )
 
 func FromRNA(rna string) ([]string, error) {
@@ -32,13 +31,6 @@ func FromCodon(codon string) (string, error) {
 	m := loadMap()
 
 	return m[codon], nil
-}
-
-// ColorCode returns the resistance value of the given color.
-func ColorCode(color string) string {
-	m := loadMap()
-
-	return m[strings.ToLower(color)]
 }
 
 func loadMap() map[string]string {
