@@ -9,7 +9,7 @@ func FromRNA(rna string) ([]string, error) {
 	//panic("Please implement the FromRNA function")
 	//ctr := 0
 	codon := ""
-	result := []string{}
+	result := []string{} //rename this to codons
 
 	for pos, char := range rna {
 		fmt.Printf("%s:%d ", string(char), pos)
