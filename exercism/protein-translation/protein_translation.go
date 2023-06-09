@@ -26,11 +26,15 @@ func FromRNA(rna string) ([]string, error) {
 	//a := []string{}
 
 	lastCodon := ""
-	for _, codon := range codons {
-
+	result := []string{}
+	for _, cdn := range codons {
+		if string(cdn) != lastCodon {
+			result = append(result, cdn)
+			lastCodon = cdn
+		}
 	}
 
-	return codons, nil
+	return result, nil
 }
 
 func FromCodon(codon string) (string, error) {
