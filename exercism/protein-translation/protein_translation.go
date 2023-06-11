@@ -4,10 +4,7 @@ import (
 	"fmt"
 )
 
-func FromRNA(rna string) ([]string, error) {
-	fmt.Printf("Assignment: %v ", rna)
-	//panic("Please implement the FromRNA function")
-	//ctr := 0
+func FromRNA(rna string) ([]string, error) {	
 	codon := ""
 	codons := []string{} //rename this to codons
 
