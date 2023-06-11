@@ -4,16 +4,13 @@ import (
 	"fmt"
 )
 
-func FromRNA(rna string) ([]string, error) {	
+func FromRNA(rna string) ([]string, error) {
 	codon := ""
 	codons := []string{} //rename this to codons
 
 	for pos, char := range rna {
-		fmt.Printf("%s:%d ", string(char), pos)
 		codon = codon + string(char)
 		if (pos+1)%3 == 0 {
-			//ctr = 0
-
 			codons = append(codons, codon)
 			codon = ""
 		}
