@@ -28,8 +28,10 @@ func FromRNA(rna string) ([]string, error) {
 	lastProtein := ""
 	result := []string{}
 	for _, cdn := range codons {
-protein, _ := FromCodon(string(cdn))
-
+		protein, _ := FromCodon(string(cdn))
+		if protein == "" || protein == "STOP" {
+			break
+		}
 		if protein != lastProtein {
 			result = append(result, protein)
 			lastProtein = protein
