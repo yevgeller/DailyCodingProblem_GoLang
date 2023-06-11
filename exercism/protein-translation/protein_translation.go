@@ -6,7 +6,7 @@ import (
 
 func FromRNA(rna string) ([]string, error) {
 	codon := ""
-	codons := []string{} //rename this to codons
+	codons := []string{}
 
 	for pos, char := range rna {
 		codon = codon + string(char)
@@ -14,11 +14,7 @@ func FromRNA(rna string) ([]string, error) {
 			codons = append(codons, codon)
 			codon = ""
 		}
-		//fmt.Printf("character %c starts at byte position %d\n", char, pos)
 	}
-	fmt.Printf("Codons: %v \n", codons)
-	//a := []string{}
-
 	lastProtein := ""
 	result := []string{}
 	for _, cdn := range codons {
