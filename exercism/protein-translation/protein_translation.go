@@ -25,12 +25,14 @@ func FromRNA(rna string) ([]string, error) {
 	fmt.Printf("Codons: %v \n", codons)
 	//a := []string{}
 
-	lastCodon := ""
+	lastProtein := ""
 	result := []string{}
 	for _, cdn := range codons {
-		if string(cdn) != lastCodon {
-			result = append(result, cdn)
-			lastCodon = cdn
+protein, _ := FromCodon(string(cdn))
+
+		if protein != lastProtein {
+			result = append(result, protein)
+			lastProtein = protein
 		}
 	}
 	fmt.Printf("Result: %v \n", result)
