@@ -4,14 +4,14 @@ import (
 	"testing"
 )
 
-// func TestErrorsNotNil(t *testing.T) {
-// 	if ErrStop == nil {
-// 		t.Fatalf("FAIL: ErrStop cannot be nil")
-// 	}
-// 	if ErrInvalidBase == nil {
-// 		t.Fatalf("FAIL: ErrInvalidBase cannot be nil")
-// 	}
-// }
+func TestErrorsNotNil(t *testing.T) {
+	if ErrStop == nil {
+		t.Fatalf("FAIL: ErrStop cannot be nil")
+	}
+	if ErrInvalidBase == nil {
+		t.Fatalf("FAIL: ErrInvalidBase cannot be nil")
+	}
+}
 
 type codonCase struct {
 	input         string
@@ -70,26 +70,26 @@ var codonTestCases = []codonCase{
 		expected:      "Tryptophan",
 		expectedError: nil,
 	},
-	// {
-	// 	input:         "UAA",
-	// 	expected:      "",
-	// 	expectedError: ErrStop,
-	// },
-	// {
-	// 	input:         "UAG",
-	// 	expected:      "",
-	// 	expectedError: ErrStop,
-	// },
-	// {
-	// 	input:         "UGA",
-	// 	expected:      "",
-	// 	expectedError: ErrStop,
-	// },
-	// {
-	// 	input:         "ABC",
-	// 	expected:      "",
-	// 	expectedError: ErrInvalidBase,
-	// },
+	{
+		input:         "UAA",
+		expected:      "",
+		expectedError: ErrStop,
+	},
+	{
+		input:         "UAG",
+		expected:      "",
+		expectedError: ErrStop,
+	},
+	{
+		input:         "UGA",
+		expected:      "",
+		expectedError: ErrStop,
+	},
+	{
+		input:         "ABC",
+		expected:      "",
+		expectedError: ErrInvalidBase,
+	},
 }
 
 func TestCodon(t *testing.T) {
@@ -137,11 +137,11 @@ var rnaTestCases = []rnaCase{
 		expected:      []string{"Tryptophan", "Cysteine", "Tyrosine"},
 		expectedError: nil,
 	},
-	// {
-	// 	input:         "UGGAGAAUUAAUGGUUU",
-	// 	expected:      nil,
-	// 	expectedError: ErrInvalidBase,
-	// },
+	{
+		input:         "UGGAGAAUUAAUGGUUU",
+		expected:      nil,
+		expectedError: ErrInvalidBase,
+	},
 }
 
 func TestProtein(t *testing.T) {
