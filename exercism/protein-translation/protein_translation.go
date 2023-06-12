@@ -1,9 +1,5 @@
 package protein
 
-import (
-	"fmt"
-)
-
 func FromRNA(rna string) ([]string, error) {
 	codon := ""
 	codons := []string{}
@@ -27,13 +23,11 @@ func FromRNA(rna string) ([]string, error) {
 			lastProtein = protein
 		}
 	}
-	fmt.Printf("Result: %v \n", result)
 	return result, nil
 }
 
 func FromCodon(codon string) (string, error) {
 	m := loadMap()
-
 	return m[codon], nil
 }
 
