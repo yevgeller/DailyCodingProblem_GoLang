@@ -4,6 +4,16 @@ func Detect(subject string, candidates []string) []string {
 	panic("Please implement the Detect function")
 }
 
+func toMap(subject string) map[rune]int {
+	m := make(map[rune]int)
+
+	for _, runeValue := range subject {
+		current := m[runeValue]
+		m[runeValue] = current + 1
+	}
+
+	return m
+}
 
 func FromCodon(codon string) (string, error) {
 	m := loadMap()
@@ -32,4 +42,3 @@ func loadMap() map[string]string {
 	}
 	return m
 }
-
