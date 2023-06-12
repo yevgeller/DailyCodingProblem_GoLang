@@ -2,7 +2,10 @@ package anagram
 
 func Detect(subject string, candidates []string) []string {
 	//panic("Please implement the Detect function")
-
+subjectMap := toMap(subject)
+for _, word in candidates {
+	
+}
 	a := []string{}
 	return a
 }
