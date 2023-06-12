@@ -1,10 +1,14 @@
 package anagram
 
+import "strings"
+
 func Detect(subject string, candidates []string) []string {
 	//panic("Please implement the Detect function")
 subjectMap := toMap(subject)
-for _, word in candidates {
-	
+for _, word := range candidates {
+	if !(strings.EqualFold(subject, word)) {
+
+	}
 }
 	a := []string{}
 	return a
