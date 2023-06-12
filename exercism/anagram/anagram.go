@@ -1,7 +1,10 @@
 package anagram
 
 func Detect(subject string, candidates []string) []string {
-	panic("Please implement the Detect function")
+	//panic("Please implement the Detect function")
+
+	a := []string{}
+	return a
 }
 
 func toMap(subject string) map[rune]int {
