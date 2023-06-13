@@ -12,7 +12,7 @@ func Detect(subject string, candidates []string) []string {
 	result := []string{}
 	for _, word := range candidates {
 		if !(strings.EqualFold(subject, word)) {
-			candidateMap := toMap(word)
+			candidateMap := toMap(strings.ToLower(word))
 			eq := reflect.DeepEqual(subjectMap, candidateMap)
 			if eq {
 				result = append(result, word)
@@ -31,7 +31,7 @@ func toMap(subject string) map[rune]int {
 		current := m[runeValue]
 		m[runeValue] = current + 1
 	}
-	fmt.Println("subject: ", subject, ", map: ", m)
+	//fmt.Println("subject: ", subject, ", map: ", m)
 	return m
 }
 
