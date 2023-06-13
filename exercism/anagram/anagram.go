@@ -7,6 +7,7 @@ func Detect(subject string, candidates []string) []string {
 subjectMap := toMap(subject)
 for _, word := range candidates {
 	if !(strings.EqualFold(subject, word)) {
+candidateMap := toMap(word)
 
 	}
 }
