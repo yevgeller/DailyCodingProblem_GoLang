@@ -1,18 +1,25 @@
 package anagram
 
-import "strings"
+import (
+	"fmt"
+	"reflect"
+	"strings"
+)
 
 func Detect(subject string, candidates []string) []string {
 	//panic("Please implement the Detect function")
-subjectMap := toMap(subject)
-for _, word := range candidates {
-	if !(strings.EqualFold(subject, word)) {
-candidateMap := toMap(word)
-
+	subjectMap := toMap(subject)
+	result := []string{}
+	for _, word := range candidates {
+		if !(strings.EqualFold(subject, word)) {
+			candidateMap := toMap(word)
+			eq := reflect.DeepEqual(subjectMap, candidateMap)
+			if eq {
+				result = append(result, word)
+			}
+		}
 	}
-}
-	a := []string{}
-	return a
+	return result
 }
 
 func toMap(subject string) map[rune]int {
@@ -22,34 +29,34 @@ func toMap(subject string) map[rune]int {
 		current := m[runeValue]
 		m[runeValue] = current + 1
 	}
-
+	fmt.Println("subject: ", subject, ", map: ", m)
 	return m
 }
 
-func FromCodon(codon string) (string, error) {
-	m := loadMap()
-	return m[codon], nil
-}
+// func FromCodon(codon string) (string, error) {
+// 	m := loadMap()
+// 	return m[codon], nil
+// }
 
-func loadMap() map[string]string {
-	m := map[string]string{
-		"AUG": "Methionine",
-		"UUU": "Phenylalanine",
-		"UUC": "Phenylalanine",
-		"UUA": "Leucine",
-		"UUG": "Leucine",
-		"UCU": "Serine",
-		"UCC": "Serine",
-		"UCA": "Serine",
-		"UCG": "Serine",
-		"UAU": "Tyrosine",
-		"UAC": "Tyrosine",
-		"UGU": "Cysteine",
-		"UGC": "Cysteine",
-		"UGG": "Tryptophan",
-		"UAA": "STOP",
-		"UAG": "STOP",
-		"UGA": "STOP",
-	}
-	return m
-}
+// func loadMap() map[string]string {
+// 	m := map[string]string{
+// 		"AUG": "Methionine",
+// 		"UUU": "Phenylalanine",
+// 		"UUC": "Phenylalanine",
+// 		"UUA": "Leucine",
+// 		"UUG": "Leucine",
+// 		"UCU": "Serine",
+// 		"UCC": "Serine",
+// 		"UCA": "Serine",
+// 		"UCG": "Serine",
+// 		"UAU": "Tyrosine",
+// 		"UAC": "Tyrosine",
+// 		"UGU": "Cysteine",
+// 		"UGC": "Cysteine",
+// 		"UGG": "Tryptophan",
+// 		"UAA": "STOP",
+// 		"UAG": "STOP",
+// 		"UGA": "STOP",
+// 	}
+// 	return m
+// }
