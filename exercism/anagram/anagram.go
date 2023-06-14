@@ -18,7 +18,7 @@ func Detect(subject string, candidates []string) []string {
 				result = append(result, word)
 			}
 		} else {
-			fmt.Println("--- EQUAL ", subject, " = ", word)
+			//fmt.Println("--- EQUAL ", subject, " = ", word)
 		}
 	}
 	return result
