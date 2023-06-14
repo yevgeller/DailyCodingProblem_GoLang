@@ -7,7 +7,6 @@ import (
 )
 
 func Detect(subject string, candidates []string) []string {
-	//panic("Please implement the Detect function")
 	subjectMap := toMap(strings.ToLower(subject))
 	result := []string{}
 	for _, word := range candidates {
