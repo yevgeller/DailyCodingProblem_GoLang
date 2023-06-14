@@ -8,7 +8,7 @@ import (
 
 func Detect(subject string, candidates []string) []string {
 	//panic("Please implement the Detect function")
-	subjectMap := toMap(subject)
+	subjectMap := toMap(strings.ToLower(subject))
 	result := []string{}
 	for _, word := range candidates {
 		if !(strings.EqualFold(subject, word)) {
