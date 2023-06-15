@@ -31,17 +31,3 @@ func toMap(subject string) map[rune]int {
 	fmt.Println("subject: ", subject, ", map: ", m)
 	return m
 }
-
-// func FromCodon(codon string) (string, error) {
-// 	m := loadMap()
-// 	return m[codon], nil
-// }
-
-// func loadMap() map[string]string {
-// 	m := map[string]string{
-// 		"AUG": "Methionine",
-// 		"UAG": "STOP",
-// 		"UGA": "STOP",
-// 	}
-// 	return m
-// }
