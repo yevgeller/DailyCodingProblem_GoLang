@@ -7,6 +7,7 @@ use (
 	./exercism/proverb
 	./exercism/rotational-cipher
 	./exercism/triangle
+	./exercism/word-count
 	./exercism/yCompleted/AnnalynsInfil
 	./exercism/yCompleted/airport-robot
 	./exercism/yCompleted/animal-magic
