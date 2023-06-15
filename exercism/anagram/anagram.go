@@ -1,7 +1,6 @@
 package anagram
 
 import (
-	"fmt"
 	"reflect"
 	"strings"
 )
