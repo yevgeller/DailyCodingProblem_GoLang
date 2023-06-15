@@ -28,6 +28,5 @@ func toMap(subject string) map[rune]int {
 		current := m[runeValue]
 		m[runeValue] = current + 1
 	}
-	fmt.Println("subject: ", subject, ", map: ", m)
 	return m
 }
