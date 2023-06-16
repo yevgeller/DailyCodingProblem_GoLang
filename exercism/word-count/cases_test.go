@@ -25,21 +25,21 @@ var testCases = []struct {
 		input:       "one fish two fish red fish blue fish",
 		expected:    Frequency{"blue": 1, "fish": 4, "one": 1, "red": 1, "two": 1},
 	},
-	// {
-	// 	description: "handles cramped lists",
-	// 	input:       "one,two,three",
-	// 	expected:    Frequency{"one": 1, "three": 1, "two": 1},
-	// },
-	// {
-	// 	description: "handles expanded lists",
-	// 	input:       "one,\ntwo,\nthree",
-	// 	expected:    Frequency{"one": 1, "three": 1, "two": 1},
-	// },
-	// {
-	// 	description: "ignore punctuation",
-	// 	input:       "car: carpet as java: javascript!!&@$%^&",
-	// 	expected:    Frequency{"as": 1, "car": 1, "carpet": 1, "java": 1, "javascript": 1},
-	// },
+	{
+		description: "handles cramped lists",
+		input:       "one,two,three",
+		expected:    Frequency{"one": 1, "three": 1, "two": 1},
+	},
+	{
+		description: "handles expanded lists",
+		input:       "one,\ntwo,\nthree",
+		expected:    Frequency{"one": 1, "three": 1, "two": 1},
+	},
+	{
+		description: "ignore punctuation",
+		input:       "car: carpet as java: javascript!!&@$%^&",
+		expected:    Frequency{"as": 1, "car": 1, "carpet": 1, "java": 1, "javascript": 1},
+	},
 	// {
 	// 	description: "include numbers",
 	// 	input:       "testing, 1, 2 testing",
