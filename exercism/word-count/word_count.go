@@ -12,13 +12,14 @@ func WordCount(phrase string) Frequency {
 	fmt.Println("Assignment: ", phrase)
 	words := []string{}
 	word := ""
-	for _, runeValue := range phrase {
+	for i, runeValue := range phrase {
 		symbol := string(runeValue)
-		if isPunctuation(symbol) {
+		if isPunctuation(symbol) || (symbol == "'" && i > 2 && i < len(phrase)-2) {
 			if len(word) > 0 {
+				fmt.Println("Word: ", word)
 				words = append(words, strings.ToLower(word))
 			}
-			fmt.Println("Word: ", word)
+
 			word = ""
 		} else {
 			word += symbol
@@ -42,6 +43,6 @@ func WordCount(phrase string) Frequency {
 
 func isPunctuation(b string) bool {
 	//result_old := b == "," || b == "." || b == "!" || b == ":" || b == ";" || b == "\n" || b == " " || b == "$" || b == "&" || b == "@" || b == "%" || b == "^"
-	result := strings.Index(",.!:;$&@%^", b) > -1 || b == " " || b == "\n"
+	result := strings.Index(",.!:;$&@%^'", b) > -1 || b == " " || b == "\n"
 	return result
 }
