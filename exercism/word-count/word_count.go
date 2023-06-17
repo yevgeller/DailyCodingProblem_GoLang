@@ -42,14 +42,14 @@ func WordCount(phrase string) Frequency {
 
 func isPunctuation(b string) bool {
 	//b := string(a)
-	result := b == "," || b == "." || b == "!" || b == ":" || b == ";" || b == "\n" || b == " " || b == "$" || b == "&" || b == "@" || b == "%" || b == "^"
+	result_old := b == "," || b == "." || b == "!" || b == ":" || b == ";" || b == "\n" || b == " " || b == "$" || b == "&" || b == "@" || b == "%" || b == "^"
 
-	result2 := strings.Index(",.!:;$&@%^", b) > -1 || b == " " || b == "\n"
+	result := strings.Index(",.!:;$&@%^", b) > -1 || b == " " || b == "\n"
 
-	if result != result2 {
+	if result_old != result {
 		panic("incorrectly determining punctuation")
 	}
 
-	fmt.Println("isPunctuation: ", b, " result: ", result)
+	fmt.Println("isPunctuation: ", b, " result: ", result_old)
 	return result
 }
