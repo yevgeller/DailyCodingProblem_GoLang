@@ -44,6 +44,12 @@ func isPunctuation(b string) bool {
 	//b := string(a)
 	result := b == "," || b == "." || b == "!" || b == ":" || b == ";" || b == "\n" || b == " " || b == "$" || b == "&" || b == "@" || b == "%" || b == "^"
 
-	fmt.Println("isPunctuation: ", b, " result: ", result)
+result2 := strings.Index(",.!:;$&@%^", b) > -1 || b == " " || b == "\n"
+
+if result != result2 {
+	panic("incorrectly determining punctuation")
+}
+
+	fmt.Println("isPunctuation: ", b, " result: ")
 	return result
 }
