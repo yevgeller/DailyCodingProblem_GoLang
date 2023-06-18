@@ -13,8 +13,11 @@ func WordCount(phrase string) Frequency {
 	words := []string{}
 	word := ""
 	for i, runeValue := range phrase {
+		//if i > 1 {
+		fmt.Println("Next: ", string(phrase[i]))
+		//}
 		symbol := string(runeValue)
-		if (symbol == "'" && i < 2 && i > len(phrase)-2) || isPunctuation(symbol) {
+		if (symbol == "'" && i > 2 && i < len(phrase)-2) || isPunctuation(symbol) {
 			if len(word) > 0 {
 				fmt.Println("Word: ", word)
 				words = append(words, strings.ToLower(word))
