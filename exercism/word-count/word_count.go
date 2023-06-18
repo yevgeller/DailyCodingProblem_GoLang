@@ -49,3 +49,14 @@ func isPunctuation(b string) bool {
 	result := strings.Index(",.!:;$&@%^'", b) > -1 || b == " " || b == "\n"
 	return result
 }
+
+func isContraction(b, phrase string, position int) bool {
+	if b != "'" {
+		return false
+	}
+	if position < 2 {
+		return false
+	}
+
+	
+}
