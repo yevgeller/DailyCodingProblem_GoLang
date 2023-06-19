@@ -61,9 +61,11 @@ func isContraction(phrase string, position int) bool {
 		return false
 	}
 
-	beforeLiteral, _ := regexp.MatchString(`[^a-z]+`, strings.ToLower(string(phrase[position-1])))
-	afterLiteral, _ := regexp.MatchString(`[^a-z]+`, strings.ToLower(string(phrase[position+1])))
-
+	beforeChar := strings.ToLower(string(phrase[position-1]))
+	afterChar := strings.ToLower(string(phrase[position+1]))
+	beforeLiteral, _ := regexp.MatchString(`[^a-z]+`, beforeChar)
+	afterLiteral, _ := regexp.MatchString(`[^a-z]+`, afterChar)
+	fmt.Println("inside isContraction, beforeLiteral: ", beforeLiteral, " char: ")
 	// strings.ToLower(string([position-1]))
 	return beforeLiteral && afterLiteral
 }
