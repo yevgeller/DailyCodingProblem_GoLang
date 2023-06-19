@@ -59,9 +59,7 @@ func isContraction(b, phrase string, position int) bool {
 		return false
 	}
 
-
-
- input := regexp.MatchString(`[^a-z]+`, strings.ToLower(string([position-1]))) 
-//strings.ToLower(string([position-1]))
-return input 
+	input, _ := regexp.MatchString(`[^a-z]+`, strings.ToLower(string(phrase[position-1])))
+	// strings.ToLower(string([position-1]))
+	return input
 }
