@@ -18,6 +18,10 @@ func WordCount(phrase string) Frequency {
 		fmt.Println("Next: ", string(phrase[i]), ", Prev: ", string(phrase[i-1]))
 		//}
 		symbol := string(runeValue)
+		if symbol == "'" {
+			fmt.Println("Is contraction ", isContraction(phrase, i))
+		}
+
 		if (symbol == "'" && i > 2 && i < len(phrase)-2) || isPunctuation(symbol) {
 			if len(word) > 0 {
 				fmt.Println("Word: ", word)
@@ -51,15 +55,15 @@ func isPunctuation(b string) bool {
 	return result
 }
 
-func isContraction(b, phrase string, position int) bool {
-	if b != "'" {
-		return false
-	}
+func isContraction(phrase string, position int) bool {
+
 	if position < 2 || position > len(phrase)-1 {
 		return false
 	}
 
-	input, _ := regexp.MatchString(`[^a-z]+`, strings.ToLower(string(phrase[position-1])))
+	beforeLiteral, _ := regexp.MatchString(`[^a-z]+`, strings.ToLower(string(phrase[position-1])))
+	afterLiteral, _ := regexp.MatchString(`[^a-z]+`, strings.ToLower(string(phrase[position+1])))
+
 	// strings.ToLower(string([position-1]))
-	return input
+	return beforeLiteral && afterLiteral
 }
