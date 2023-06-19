@@ -54,9 +54,8 @@ func isContraction(b, phrase string, position int) bool {
 	if b != "'" {
 		return false
 	}
-	if position < 2 {
+	if position < 2 || position > len(phrase)-1 {
 		return false
 	}
-
-	
+return input = regexp.MustCompile(`[^a-z]+`) strings.ToLower(string([position-1]))
 }
