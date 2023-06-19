@@ -2,6 +2,7 @@ package wordcount
 
 import (
 	"fmt"
+	"regexp"
 	"strings"
 )
 
@@ -57,5 +58,10 @@ func isContraction(b, phrase string, position int) bool {
 	if position < 2 || position > len(phrase)-1 {
 		return false
 	}
-return input = regexp.MustCompile(`[^a-z]+`) strings.ToLower(string([position-1]))
+
+
+
+ input := regexp.MatchString(`[^a-z]+`, strings.ToLower(string([position-1]))) 
+//strings.ToLower(string([position-1]))
+return input 
 }
