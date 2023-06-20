@@ -50,11 +50,11 @@ var testCases = []struct {
 	// 	input:       "go Go GO Stop stop",
 	// 	expected:    Frequency{"go": 3, "stop": 2},
 	// },
-	// {
-	// 	description: "with apostrophes",
-	// 	input:       "'First: don't laugh. Then: don't cry. You're getting it.'",
-	// 	expected:    Frequency{"cry": 1, "don't": 2, "first": 1, "getting": 1, "it": 1, "laugh": 1, "then": 1, "you're": 1},
-	// },
+	{
+		description: "with apostrophes",
+		input:       "'First: don't laugh. Then: don't cry. You're getting it.'",
+		expected:    Frequency{"cry": 1, "don't": 2, "first": 1, "getting": 1, "it": 1, "laugh": 1, "then": 1, "you're": 1},
+	},
 	// {
 	// 	description: "with quotations",
 	// 	input:       "Joe can't tell between 'large' and large.",
