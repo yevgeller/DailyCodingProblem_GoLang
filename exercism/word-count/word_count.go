@@ -57,7 +57,7 @@ func isPunctuation(b string) bool {
 
 func isContraction(phrase string, position int) bool {
 
-	if position < 2 || position > len(phrase)-1 {
+	if position < 2 || position > len(phrase)-2 {
 		return false
 	}
 
