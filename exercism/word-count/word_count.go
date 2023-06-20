@@ -65,7 +65,10 @@ func isContraction(phrase string, position int) bool {
 	afterChar := strings.ToLower(string(phrase[position+1]))
 	beforeLiteral, _ := regexp.MatchString(`[^a-z]+`, beforeChar)
 	afterLiteral, _ := regexp.MatchString(`[^a-z]+`, afterChar)
-	fmt.Println("inside isContraction, beforeLiteral: ", beforeLiteral, " char: ")
+	fmt.Println("inside isContraction, beforeLiteral: ", beforeLiteral, " beforeChar: ", beforeChar, ", afterLiteral: ", afterLiteral, ", afterChar: ", afterChar)
 	// strings.ToLower(string([position-1]))
 	return beforeLiteral && afterLiteral
 }
+
+//uncomment a test with an apostrophe
+//test isContraction
