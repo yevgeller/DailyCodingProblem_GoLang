@@ -22,27 +22,27 @@ func WordCount(phrase string) Frequency {
 			fmt.Println("Is contraction ", isContraction(phrase, i))
 		}
 
-if isContraction(phrase, i) && !isPunctuation(symbol) {
-	word += symbol
-} else {
-	if len(word) > 0 {
-				fmt.Println("Word: ", word)
-				words = append(words, strings.ToLower(word))
-			}
-
-			word = ""
-}
-
-		if !isContraction(phrase, i) && isPunctuation(symbol) { //(symbol == "'" && i > 2 && i < len(phrase)-2) || isPunctuation(symbol) {
+		if isContraction(phrase, i) && !isPunctuation(symbol) {
+			word += symbol
+		} else {
 			if len(word) > 0 {
 				fmt.Println("Word: ", word)
 				words = append(words, strings.ToLower(word))
 			}
 
 			word = ""
-		} else {
-			word += symbol
 		}
+
+		// if !isContraction(phrase, i) && isPunctuation(symbol) { //(symbol == "'" && i > 2 && i < len(phrase)-2) || isPunctuation(symbol) {
+		// 	if len(word) > 0 {
+		// 		fmt.Println("Word: ", word)
+		// 		words = append(words, strings.ToLower(word))
+		// 	}
+
+		// 	word = ""
+		// } else {
+		// 	word += symbol
+		// }
 
 	}
 	fmt.Println("Remaining word: ", word, ", len: ", len(word))
