@@ -23,15 +23,13 @@ func WordCount(phrase string) Frequency {
 		}
 
 		if isContraction(phrase, i) {
-			
-		} else if  isPunctuation(symbol) {
+			word += symbol
+		} else if isPunctuation(symbol) {
 			if len(word) > 0 {
 				fmt.Println("Word: ", word)
 				words = append(words, strings.ToLower(word))
 			}
-		}
-		
-		else {
+		} else {
 			word += symbol
 			// if len(word) > 0 {
 			// 	fmt.Println("Word: ", word)
@@ -71,6 +69,7 @@ func WordCount(phrase string) Frequency {
 func isPunctuation(b string) bool {
 	//result_old := b == "," || b == "." || b == "!" || b == ":" || b == ";" || b == "\n" || b == " " || b == "$" || b == "&" || b == "@" || b == "%" || b == "^"
 	result := strings.Index(",.!:;$&@%^'", b) > -1 || b == " " || b == "\n"
+	fmt.Println("Symbol: ", b, ", result: ", result)
 	return result
 }
 
