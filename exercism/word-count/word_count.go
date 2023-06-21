@@ -22,15 +22,23 @@ func WordCount(phrase string) Frequency {
 			fmt.Println("Is contraction ", isContraction(phrase, i))
 		}
 
-		if isContraction(phrase, i) && !isPunctuation(symbol) {
-			word += symbol
-		} else {
+		if isContraction(phrase, i) {
+			
+		} else if  isPunctuation(symbol) {
 			if len(word) > 0 {
 				fmt.Println("Word: ", word)
 				words = append(words, strings.ToLower(word))
 			}
+		}
+		
+		else {
+			word += symbol
+			// if len(word) > 0 {
+			// 	fmt.Println("Word: ", word)
+			// 	words = append(words, strings.ToLower(word))
+			// }
 
-			word = ""
+			// word = ""
 		}
 
 		// if !isContraction(phrase, i) && isPunctuation(symbol) { //(symbol == "'" && i > 2 && i < len(phrase)-2) || isPunctuation(symbol) {
@@ -76,7 +84,7 @@ func isContraction(phrase string, position int) bool {
 	afterChar := strings.ToLower(string(phrase[position+1]))
 	beforeLiteral, _ := regexp.MatchString(`[a-z]`, beforeChar)
 	afterLiteral, _ := regexp.MatchString(`[a-z]`, afterChar)
-	fmt.Println("inside isContraction, beforeLiteral: ", beforeLiteral, " beforeChar: ", beforeChar, ", afterLiteral: ", afterLiteral, ", afterChar: ", afterChar)
+	//fmt.Println("inside isContraction, beforeLiteral: ", beforeLiteral, " beforeChar: ", beforeChar, ", afterLiteral: ", afterLiteral, ", afterChar: ", afterChar)
 	// strings.ToLower(string([position-1]))
 	return beforeLiteral && afterLiteral
 }
