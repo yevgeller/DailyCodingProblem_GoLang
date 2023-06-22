@@ -22,7 +22,6 @@ func WordCount(phrase string) Frequency {
 			word += symbol
 		} else if isPunctuation(symbol) {
 			if len(word) > 0 {
-				//fmt.Println("Word: ", word)
 				words = append(words, strings.ToLower(word))
 				word = ""
 			}
