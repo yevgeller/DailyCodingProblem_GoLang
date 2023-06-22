@@ -9,8 +9,6 @@ import (
 type Frequency map[string]int
 
 func WordCount(phrase string) Frequency {
-	//panic("Please implement the WordCount function")
-	fmt.Println("Assignment: ", phrase)
 	words := []string{}
 	word := ""
 	for i, runeValue := range phrase {
