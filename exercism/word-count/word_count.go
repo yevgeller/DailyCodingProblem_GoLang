@@ -14,9 +14,7 @@ func WordCount(phrase string) Frequency {
 	words := []string{}
 	word := ""
 	for i, runeValue := range phrase {
-		//if i > 1 {
-		//fmt.Println("Next: ", string(phrase[i]), ", Prev: ", string(phrase[i-1]))
-		//}
+
 		symbol := string(runeValue)
 		if symbol == "'" {
 			fmt.Println("Is contraction ", isContraction(phrase, i))
