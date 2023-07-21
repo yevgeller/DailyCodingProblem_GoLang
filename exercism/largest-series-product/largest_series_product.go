@@ -2,6 +2,7 @@ package lsproduct
 
 import (
 	"errors"
+	"fmt"
 	"strconv"
 )
 
@@ -10,7 +11,7 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 	if span < len(digits) {
 		return 0, errors.New("span must be greater or equal to string length")
 	}
-
+	fmt.Println("digits: ", digits, " span: ", span)
 	converted := make([]int, len(digits))
 	largestProduct := 0
 	for _, c := range digits {
@@ -19,7 +20,8 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 		//fmt.Println(i, " => ", string(c))
 		converted = append(converted, digit)
 	}
-
+	fmt.Println("converted: ", converted)
+	
 	for i, c := range converted {
 		if i+span >= len(converted) {
 			return int64(largestProduct), nil
@@ -30,9 +32,9 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 			interimProduct *= converted[i+cnt]
 			cnt -= 1
 		}
-if largestProduct < interimProduct {
-	largestProduct = interimProduct;
-}
+		if largestProduct < interimProduct {
+			largestProduct = interimProduct
+		}
 	}
 
 	return 0, nil
