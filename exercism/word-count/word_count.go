@@ -8,7 +8,50 @@ import (
 
 type Frequency map[string]int
 
+/* shame shame
+func WordCount(input string) Frequency {
+	result := map[string]int{}
+	words := regexp.MustCompile(`\b[\p{L}\d']+\b`).FindAllString(input, -1)
+	for _, w := range words {
+		result[strings.ToLower(w)]++
+	}
+	return result
+}
+*/
+
 func WordCount(phrase string) Frequency {
+	words := strings.Fields(phrase)
+	cleanWords := []string{}
+	for _, w := range words {
+		cleanWords = append(cleanWords, stripSpecialCharacters(w))
+	}
+	fmt.Println(phrase, ", arr: ", words, ", clean:", cleanWords)
+
+	m := make(map[string]int)
+	for _, w := range cleanWords {
+		currentCount := m[w]
+		m[w] = currentCount + 1
+
+	}
+	return m
+}
+
+func stripSpecialCharacters(word string) string {
+	cleanWord := ""
+	for i, runeValue := range word {
+		lowerCase := strings.ToLower(string(runeValue))
+		isChar, _ := regexp.MatchString(`[a-z\d]`, lowerCase)
+		if isChar || (lowerCase == "'" && i > 0) {
+			cleanWord += lowerCase
+		}
+	}
+	if strings.HasSuffix(cleanWord, "'") {
+		cleanWord = strings.TrimRight(cleanWord, "'")
+	}
+	return cleanWord
+}
+
+func WordCount2(phrase string) Frequency {
 	words := []string{}
 	word := ""
 	for i, runeValue := range phrase {
@@ -29,17 +72,6 @@ func WordCount(phrase string) Frequency {
 			word += symbol
 		}
 		fmt.Println("Word: ", word)
-		// if !isContraction(phrase, i) && isPunctuation(symbol) { //(symbol == "'" && i > 2 && i < len(phrase)-2) || isPunctuation(symbol) {
-		// 	if len(word) > 0 {
-		// 		fmt.Println("Word: ", word)
-		// 		words = append(words, strings.ToLower(word))
-		// 	}
-
-		// 	word = ""
-		// } else {
-		// 	word += symbol
-		// }
-
 	}
 	fmt.Println("Remaining word: ", word, ", len: ", len(word))
 	if len(word) > 0 {
