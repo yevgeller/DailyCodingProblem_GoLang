@@ -24,6 +24,15 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 		if i+span >= len(converted) {
 			return int64(largestProduct), nil
 		}
+		cnt := span - 1
+		interimProduct := c
+		for cnt > 0 {
+			interimProduct *= converted[i+cnt]
+			cnt -= 1
+		}
+if largestProduct < interimProduct {
+	largestProduct = interimProduct;
+}
 	}
 
 	return 0, nil
