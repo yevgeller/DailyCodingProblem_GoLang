@@ -27,12 +27,6 @@ func WordCount(phrase string) Frequency {
 			}
 		} else {
 			word += symbol
-			// if len(word) > 0 {
-			// 	fmt.Println("Word: ", word)
-			// 	words = append(words, strings.ToLower(word))
-			// }
-
-			// word = ""
 		}
 		fmt.Println("Word: ", word)
 		// if !isContraction(phrase, i) && isPunctuation(symbol) { //(symbol == "'" && i > 2 && i < len(phrase)-2) || isPunctuation(symbol) {
