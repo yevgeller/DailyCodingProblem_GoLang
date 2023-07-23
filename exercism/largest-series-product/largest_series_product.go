@@ -13,7 +13,7 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 	}
 	//fmt.Println("digits: ", digits, " span: ", span)
 	converted := make([]int, 0) //, len(digits))
-	largestProduct := 0
+	largestProduct := -1
 	for _, c := range digits {
 		digit, _ := strconv.Atoi(string(c))
 
@@ -24,19 +24,21 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 
 	for i, c := range converted {
 		if i+span > len(converted) {
-			fmt.Println("i: ", ", span: ", span, "len(converted):", len(converted), ", i+span > len(converted)")
+			fmt.Println("i: ", i, ", span: ", span, "len(converted):", len(converted), ", i+span > len(converted)")
 			return int64(largestProduct), nil
 		}
 		cnt := span - 1
 		interimProduct := c
-		for cnt > 0 {
+		for cnt >= 0 {
 			interimProduct *= converted[i+cnt]
+			fmt.Println("new interimProduct", interimProduct, ", converted[i+cnt]", converted[i+cnt])
 			cnt -= 1
 		}
 		if largestProduct < interimProduct {
 			largestProduct = interimProduct
+			fmt.Println("largestProduct is now ", largestProduct)
 		}
 	}
 
-	return 0, nil
+	return int64(largestProduct), nil
 }
