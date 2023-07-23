@@ -8,7 +8,7 @@ import (
 
 func LargestSeriesProduct(digits string, span int) (int64, error) {
 	//panic("Please implement the LargestSeriesProduct function")
-	if span < len(digits) {
+	if span > len(digits) {
 		return 0, errors.New("span must be greater or equal to string length")
 	}
 	//fmt.Println("digits: ", digits, " span: ", span)
