@@ -3,6 +3,7 @@ go 1.20
 use (
 	./exercism/anagram
 	./exercism/clock
+	./exercism/largest-series-product
 	./exercism/protein-translation
 	./exercism/proverb
 	./exercism/rotational-cipher
