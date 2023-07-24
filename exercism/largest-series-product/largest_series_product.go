@@ -29,7 +29,7 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 		}
 		cnt := span - 1
 		interimProduct := c
-		for cnt >= 0 {
+		for cnt > 0 {
 			interimProduct *= converted[i+cnt]
 			fmt.Println("new interimProduct", interimProduct, ", converted[i+cnt]", converted[i+cnt])
 			cnt -= 1
@@ -37,6 +37,8 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 		if largestProduct < interimProduct {
 			largestProduct = interimProduct
 			fmt.Println("largestProduct is now ", largestProduct)
+		} else {
+			fmt.Println("largestProduct did not change: ", largestProduct)
 		}
 	}
 
