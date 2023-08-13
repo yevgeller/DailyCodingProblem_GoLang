@@ -89,18 +89,18 @@ var testCases = []struct {
 		expected:    0,
 		error:       "span must be smaller than string length",
 	},
-	// {
-	// 	description: "rejects invalid character in digits",
-	// 	digits:      "1234a5",
-	// 	span:        2,
-	// 	expected:    0,
-	// 	error:       "digits input must only contain digits",
-	// },
-	// {
-	// 	description: "rejects negative span",
-	// 	digits:      "12345",
-	// 	span:        -1,
-	// 	expected:    0,
-	// 	error:       "span must not be negative",
-	// },
+	{
+		description: "rejects invalid character in digits",
+		digits:      "1234a5",
+		span:        2,
+		expected:    0,
+		error:       "digits input must only contain digits",
+	},
+	{
+		description: "rejects negative span",
+		digits:      "12345",
+		span:        -1,
+		expected:    0,
+		error:       "span must not be negative",
+	},
 }

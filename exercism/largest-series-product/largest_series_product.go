@@ -11,6 +11,9 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 	if span > len(digits) {
 		return 0, errors.New("span must be smaller than string length")
 	}
+	if span < 1 {
+		return 0, errors.New("span must be greater than 0")
+	}
 	//fmt.Println("digits: ", digits, " span: ", span)
 	converted := make([]int, 0) //, len(digits))
 	largestProduct := -1
