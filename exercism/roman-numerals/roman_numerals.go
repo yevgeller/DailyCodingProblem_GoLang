@@ -3,13 +3,12 @@ package romannumerals
 import "errors"
 
 func ToRomanNumeral(input int) (string, error) {
-	//panic("Please implement the ToRomanNumeral function")
 	if input < 1 {
 		return "", errors.New("out of range")
 	}
-if input > 3999 {
-	return "", errors.New("out of range")
-}
+	if input > 3999 {
+		return "", errors.New("out of range")
+	}
 	return numberToString(input), nil
 }
 
