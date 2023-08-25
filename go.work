@@ -6,6 +6,7 @@ use (
 	./exercism/largest-series-product
 	./exercism/protein-translation
 	./exercism/proverb
+	./exercism/roman-numerals
 	./exercism/rotational-cipher
 	./exercism/triangle
 	./exercism/word-count
