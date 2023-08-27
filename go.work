@@ -2,6 +2,7 @@ go 1.20
 
 use (
 	./exercism/anagram
+	./exercism/atbash-cipher
 	./exercism/clock
 	./exercism/largest-series-product
 	./exercism/protein-translation
