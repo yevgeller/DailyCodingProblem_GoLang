@@ -6,9 +6,20 @@ func Atbash(s string) string {
 	//panic("Please implement the Atbash function")
 	normalized := strings.ToLower(s)
 	m := loadMap()
+	ret := ""
 
+	for _, w := range normalized {
+		if isLetter(w) {
+			ret += m[string(w)]
+		} else {
+			ret += string(w)
+		}
+	}
+	return ret
 }
-
+func isLetter(c rune) bool {
+	return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')
+}
 func loadMap() map[string]string {
 	m := map[string]string{
 		"a": "z",
