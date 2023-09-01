@@ -10,7 +10,7 @@ func Atbash(s string) string {
 	normalized := strings.ToLower(s)
 	m := loadMap()
 	ret := ""
-	counter := 0
+	counter := 1
 	for _, w := range normalized {
 		if isLetter(w) {
 			counter += 1
@@ -18,6 +18,10 @@ func Atbash(s string) string {
 		} else if unicode.IsDigit(w) {
 			counter += 1
 			ret += string(w)
+		}
+		if counter%5 == 0 {
+			ret += " "
+
 		}
 	}
 	return ret
