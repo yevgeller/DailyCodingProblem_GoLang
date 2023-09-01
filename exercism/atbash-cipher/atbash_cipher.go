@@ -12,19 +12,22 @@ func Atbash(s string) string {
 	m := loadMap()
 	ret := ""
 	counter := 0
+	word := ""
 	for _, w := range normalized {
 		if isLetter(w) {
 			counter += 1
-			ret += m[string(w)]
-			fmt.Println("'", string(w), "'->'", m[string(w)], "', result: ", ret, ", ret length", len(ret), " counter: ", counter)
+			word += m[string(w)]
+			fmt.Println("word: ", word, " len(word):", len(word), " ret: ", ret, " char:", string(w))
+			//ret += m[string(w)]
+			//fmt.Println("'", string(w), "'->'", m[string(w)], "', result: ", ret, ", ret length", len(ret), " counter: ", counter)
 		} else if unicode.IsDigit(w) {
 			counter += 1
 			ret += strings.TrimSpace(string(w))
-			fmt.Println("attaching number '", strings.TrimSpace(string(w)), "' to ", ret, ", ret length", len(ret), " counter: ", counter)
+			//fmt.Println("attaching number '", strings.TrimSpace(string(w)), "' to ", ret, ", ret length", len(ret), " counter: ", counter)
 		}
-		if counter%5 == 0 {
+		if (len(ret))%5 == 0 {
+			fmt.Println("counter: ", counter, ", attaching a space,", "symbol: ", w, ", ", string(w), " len(ret)", len(ret))
 			ret += " "
-			fmt.Println("counter: ", counter, ", attaching a space")
 		}
 		//fmt.Println("counter: ", counter, " ret:", ret, ", ret length", len(ret), ", w:", string(w))
 	}
