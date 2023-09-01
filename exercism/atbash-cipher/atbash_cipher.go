@@ -19,8 +19,8 @@ func Atbash(s string) string {
 			fmt.Println("'", string(w), "'->'", m[string(w)], "', result: ", ret, ", ret length", len(ret), " counter: ", counter)
 		} else if unicode.IsDigit(w) {
 			counter += 1
-			ret += strings.Trim((w))
-			fmt.Println("attaching number '", strings.Trim(string(w)), "' to ", ret, ", ret length", len(ret), " counter: ", counter)
+			ret += strings.TrimSpace(string(w))
+			fmt.Println("attaching number '", strings.TrimSpace(string(w)), "' to ", ret, ", ret length", len(ret), " counter: ", counter)
 		}
 		if counter%5 == 0 {
 			ret += " "
