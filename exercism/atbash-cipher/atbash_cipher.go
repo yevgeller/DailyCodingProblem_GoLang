@@ -1,6 +1,7 @@
 package atbash
 
 import (
+	"fmt"
 	"strings"
 	"unicode"
 )
@@ -15,14 +16,17 @@ func Atbash(s string) string {
 		if isLetter(w) {
 			counter += 1
 			ret += m[string(w)]
+			fmt.Println("'", string(w), "'->'", m[string(w)], "', result: ", ret, ", ret length", len(ret), " counter: ", counter)
 		} else if unicode.IsDigit(w) {
 			counter += 1
 			ret += string(w)
+			fmt.Println("attaching number '", string(w), "' to ", ret, ", ret length", len(ret), " counter: ", counter)
 		}
 		if counter%5 == 0 {
 			ret += " "
 
 		}
+		//fmt.Println("counter: ", counter, " ret:", ret, ", ret length", len(ret), ", w:", string(w))
 	}
 	return ret
 }
