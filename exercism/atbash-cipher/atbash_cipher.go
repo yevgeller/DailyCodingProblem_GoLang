@@ -10,18 +10,20 @@ func Atbash(s string) string {
 	normalized := strings.ToLower(s)
 	m := loadMap()
 	ret := ""
-
+	counter := 1
 	for _, w := range normalized {
 		if isLetter(w) {
+			counter += 1
 			ret += m[string(w)]
-		} else if unicode.IsDigit(w)  {
+		} else if unicode.IsDigit(w) {
+			counter += 1
 			ret += string(w)
 		}
 	}
 	return ret
 }
 func isLetter(c rune) bool {
-	return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') 
+	return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')
 }
 
 func loadMap() map[string]string {
