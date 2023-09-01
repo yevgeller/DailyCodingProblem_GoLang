@@ -24,7 +24,7 @@ func Atbash(s string) string {
 		}
 		if counter%5 == 0 {
 			ret += " "
-
+			fmt.Println("counter: ", counter, ", attaching a space")
 		}
 		//fmt.Println("counter: ", counter, " ret:", ret, ", ret length", len(ret), ", w:", string(w))
 	}
