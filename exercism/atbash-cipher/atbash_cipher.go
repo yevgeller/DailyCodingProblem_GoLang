@@ -10,7 +10,7 @@ func Atbash(s string) string {
 	normalized := strings.ToLower(s)
 	m := loadMap()
 	ret := ""
-	counter := 1
+	counter := 0
 	for _, w := range normalized {
 		if isLetter(w) {
 			counter += 1
