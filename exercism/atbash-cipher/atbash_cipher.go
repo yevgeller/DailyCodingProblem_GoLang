@@ -1,6 +1,9 @@
 package atbash
 
-import "strings"
+import (
+	"strings"
+	"unicode"
+)
 
 func Atbash(s string) string {
 	//panic("Please implement the Atbash function")
@@ -11,15 +14,16 @@ func Atbash(s string) string {
 	for _, w := range normalized {
 		if isLetter(w) {
 			ret += m[string(w)]
-		} else {
+		} else if unicode.IsDigit(w)  {
 			ret += string(w)
 		}
 	}
 	return ret
 }
 func isLetter(c rune) bool {
-	return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')
+	return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') 
 }
+
 func loadMap() map[string]string {
 	m := map[string]string{
 		"a": "z",
