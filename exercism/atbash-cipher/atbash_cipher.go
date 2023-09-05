@@ -1,7 +1,6 @@
 package atbash
 
 import (
-	"fmt"
 	"strings"
 	"unicode"
 )
@@ -12,12 +11,10 @@ func Atbash(s string) string {
 	ret := ""
 	word := ""
 	for _, w := range normalized {
-		if unicode.IsLetter(w) { 
+		if unicode.IsLetter(w) {
 			word += m[string(w)]
-			fmt.Println("word: ", word, " len(word):", len(word), " ret: ", ret, " char:", string(w))
 		} else if unicode.IsDigit(w) {
 			word += string(w)
-			fmt.Println("word: ", word, " len(word):", len(word), " ret: ", ret, " char:", string(w))
 		}
 		if len(word) == 5 {
 			ret += word + " "
@@ -25,9 +22,6 @@ func Atbash(s string) string {
 		}
 	}
 	return strings.TrimSpace(ret + word)
-}
-func isLetter(c rune) bool {
-	return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')
 }
 
 func loadMap() map[string]string {
