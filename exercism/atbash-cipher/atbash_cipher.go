@@ -12,7 +12,7 @@ func Atbash(s string) string {
 	ret := ""
 	word := ""
 	for _, w := range normalized {
-		if isLetter(w) {
+		if unicode.IsLetter(w) { 
 			word += m[string(w)]
 			fmt.Println("word: ", word, " len(word):", len(word), " ret: ", ret, " char:", string(w))
 		} else if unicode.IsDigit(w) {
@@ -23,12 +23,6 @@ func Atbash(s string) string {
 			ret += word + " "
 			word = ""
 		}
-
-		// if (len(ret))%5 == 0 {
-		// 	fmt.Println("counter: ", counter, ", attaching a space,", "symbol: ", w, ", ", string(w), " len(ret)", len(ret))
-		// 	ret += " "
-		// }
-		//fmt.Println("counter: ", counter, " ret:", ret, ", ret length", len(ret), ", w:", string(w))
 	}
 	return strings.TrimSpace(ret + word)
 }
