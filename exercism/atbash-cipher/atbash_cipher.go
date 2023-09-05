@@ -38,7 +38,7 @@ func Atbash(s string) string {
 		// }
 		//fmt.Println("counter: ", counter, " ret:", ret, ", ret length", len(ret), ", w:", string(w))
 	}
-	return ret + word
+	return strings.TrimSpace(ret + word)
 }
 func isLetter(c rune) bool {
 	return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')
