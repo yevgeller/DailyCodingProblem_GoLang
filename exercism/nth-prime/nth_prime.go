@@ -12,6 +12,12 @@ func Nth(n int) (int, error) {
 	if n < 1 {
 		return 0, errors.New("lol nice try")
 	}
+	if n == 1 {
+		return 2, nil
+	}
+	if n == 2 {
+		return 3, nil
+	}
 	arr := createStorageArray(n)
 	fmt.Println("the size of array is now ", len(arr))
 	limit := uint64(n)
@@ -49,7 +55,9 @@ func Nth(n int) (int, error) {
 	}
 
 	for x = 0; x < limit; x++ {
-		fmt.Print(x, ":", arr[x], " ")
+		if arr[x] == true {
+			fmt.Print(x, ", ")
+		}
 	}
 
 	// for (ulong x = 1; x <= sqrt; x++)
