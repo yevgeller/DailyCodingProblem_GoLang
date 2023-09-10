@@ -5,6 +5,7 @@ use (
 	./exercism/atbash-cipher
 	./exercism/clock
 	./exercism/largest-series-product
+	./exercism/nth-prime
 	./exercism/protein-translation
 	./exercism/proverb
 	./exercism/roman-numerals
