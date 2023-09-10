@@ -21,7 +21,9 @@ func Nth(n int) (int, error) {
 	arr := createStorageArray(n)
 	fmt.Println("the size of array is now ", len(arr))
 	limit := uint64(n)
-	sqrt := uint64(math.Floor(math.Sqrt(float64(n))))
+	sqrt := uint64(math.Sqrt(float64(n)))
+	arr[2] = true
+	arr[3] = true
 	var x, y uint64
 
 	for x = 1; x <= sqrt; x++ {
@@ -42,21 +44,16 @@ func Nth(n int) (int, error) {
 			}
 		}
 
-		for x = 5; x <= sqrt; x++ {
+	
+	}
+	for x = 5; x <= sqrt; x++ {
 			if arr[x] == true {
-
-
-
-				for y = x * x; y <= limit; y *= y {
+				xSquared := x * x
+				for y = xSquared; y <= limit; y += xSquared {
 					arr[y] = false
 				}
 			}
 		}
-
-		arr[2] = true
-		arr[3] = true
-	}
-
 	for x = 0; x < limit; x++ {
 		if arr[x] == true {
 			fmt.Print(x, ", ")
@@ -82,12 +79,12 @@ func Nth(n int) (int, error) {
 	// for (ulong n = 5; n <= sqrt; n++)
 	//     if (isPrime[n])
 
-// ulong nSquared = n * n;
-// for (ulong k = nSquared; k <= limit; k += nSquared)
-//   isPrime[k] = false;
+	// ulong nSquared = n * n;
+	// for (ulong k = nSquared; k <= limit; k += nSquared)
+	//   isPrime[k] = false;
 
-	//         for (ulong k = n*n; k <= limit; k *= k)
-	//             isPrime[k] = false;
+	// for (ulong k = n*n; k <= limit; k *= k)
+	//     isPrime[k] = false;
 
 	// primes.Add(2);
 	// primes.Add(3);
