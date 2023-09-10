@@ -44,6 +44,9 @@ func Nth(n int) (int, error) {
 
 		for x = 5; x <= sqrt; x++ {
 			if arr[x] == true {
+
+
+
 				for y = x * x; y <= limit; y *= y {
 					arr[y] = false
 				}
@@ -78,6 +81,11 @@ func Nth(n int) (int, error) {
 
 	// for (ulong n = 5; n <= sqrt; n++)
 	//     if (isPrime[n])
+
+// ulong nSquared = n * n;
+// for (ulong k = nSquared; k <= limit; k += nSquared)
+//   isPrime[k] = false;
+
 	//         for (ulong k = n*n; k <= limit; k *= k)
 	//             isPrime[k] = false;
 
