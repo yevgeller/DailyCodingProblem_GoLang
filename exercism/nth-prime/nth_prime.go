@@ -12,16 +12,13 @@ func Nth(n int) (int, error) {
 	if n < 1 {
 		return 0, errors.New("lol nice try")
 	}
-	if n == 1 {
-		return 2, nil
-	}
-	if n == 2 {
-		return 3, nil
-	}
-	arr := createStorageArray(n)
-	fmt.Println("the size of array is now ", len(arr))
 	limit := uint64(n)
-	sqrt := uint64(math.Sqrt(float64(n)))
+	if limit < 100 {
+		limit = 100
+	}
+	arr := createStorageArray(int(limit))
+	fmt.Println("the size of array is now ", len(arr))
+	sqrt := uint64(math.Sqrt(float64(limit)))
 	arr[2] = true
 	arr[3] = true
 	var x, y uint64
@@ -44,19 +41,25 @@ func Nth(n int) (int, error) {
 			}
 		}
 
-	
 	}
 	for x = 5; x <= sqrt; x++ {
-			if arr[x] == true {
-				xSquared := x * x
-				for y = xSquared; y <= limit; y += xSquared {
-					arr[y] = false
-				}
+		if arr[x] == true {
+			xSquared := x * x
+			for y = xSquared; y <= limit; y += xSquared {
+				arr[y] = false
 			}
 		}
+	}
+
+	b := 0
+
 	for x = 0; x < limit; x++ {
 		if arr[x] == true {
+			b += 1
 			fmt.Print(x, ", ")
+			if b == n {
+				return int(x), nil
+			}
 		}
 	}
 
@@ -96,7 +99,7 @@ func Nth(n int) (int, error) {
 }
 
 func createStorageArray(n int) []bool {
-	ret := make([]bool, n*n)
+	ret := make([]bool, n*n*2)
 
 	for i := range ret {
 		ret[i] = false
