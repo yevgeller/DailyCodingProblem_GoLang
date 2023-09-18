@@ -2,7 +2,6 @@ package prime
 
 import (
 	"errors"
-	"fmt"
 	"math"
 )
 
@@ -17,12 +16,11 @@ func Nth(n int) (int, error) {
 	arr := createStorageArray(int(limit))
 	limit = uint64(len(arr)) - 1
 	sqrt := uint64(math.Sqrt(float64(limit)))
-	fmt.Println("the size of array is now ", len(arr), ", limit is ", limit, ", sqrt is ", sqrt)
 
 	arr[2] = true
 	arr[3] = true
 	var x, y uint64
-	
+
 	for x = 1; x <= sqrt; x++ {
 		for y = 1; y <= sqrt; y++ {
 			a := 4*x*x + y*y
@@ -56,15 +54,12 @@ func Nth(n int) (int, error) {
 	for x = 0; x < uint64(len(arr)); x++ {
 		if arr[x] == true {
 			b += 1
-			fmt.Print(x, ", ")
 			if b == n {
 				return int(x), nil
 			}
 		}
 
 	}
-	fmt.Println("stopped at ", x)
-
 	return 1, nil
 }
 
