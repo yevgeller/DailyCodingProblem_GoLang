@@ -17,12 +17,14 @@ func Nth(n int) (int, error) {
 		limit = 100
 	}
 	arr := createStorageArray(int(limit))
-	fmt.Println("the size of array is now ", len(arr))
+	limit = uint64(len(arr))
 	sqrt := uint64(math.Sqrt(float64(limit)))
+	fmt.Println("the size of array is now ", len(arr), ", limit is ", limit, ", sqrt is ", sqrt)
+
 	arr[2] = true
 	arr[3] = true
 	var x, y uint64
-
+	//fmt.Println("sqrt is ", sqrt)
 	for x = 1; x <= sqrt; x++ {
 		for y = 1; y <= sqrt; y++ {
 			a := 4*x*x + y*y
@@ -63,7 +65,7 @@ func Nth(n int) (int, error) {
 		}
 
 	}
-
+	fmt.Println("stopped at ", x)
 	// for (ulong x = 1; x <= sqrt; x++)
 	//     for (ulong y = 1; y <= sqrt; y++)
 	//     {
