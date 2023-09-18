@@ -53,7 +53,7 @@ func Nth(n int) (int, error) {
 
 	b := 0
 
-	for x = 0; x < limit; x++ {
+	for x = 0; x < uint64(len(arr)); x++ {
 		if arr[x] == true {
 			b += 1
 			fmt.Print(x, ", ")
@@ -61,6 +61,7 @@ func Nth(n int) (int, error) {
 				return int(x), nil
 			}
 		}
+
 	}
 
 	// for (ulong x = 1; x <= sqrt; x++)
